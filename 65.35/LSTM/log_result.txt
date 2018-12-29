@@ -1,0 +1,2023 @@
+2018-07-10 17:16:56,173: main_new: INFO: Loading knowledge base ...
+2018-07-10 17:16:56,174: main_new: DEBUG: {'CNN_filter': 128,
+ 'CNN_kernel': 3,
+ 'RUN_NAME': 'histogram_visualization',
+ 'batch_size': 32,
+ 'clip_c': 10.0,
+ 'cut_news': 70,
+ 'cut_word': False,
+ 'datasets': ['../data/ding_new_10/train.csv',
+              '../data/ding_new_10/train_label.csv'],
+ 'decay_c': 0.0,
+ 'decoder': 'lstm',
+ 'delay1': 3,
+ 'delay2': 7,
+ 'delay_tech': 5,
+ 'dictionary': '../data/ding_new_10/vocab_cased_title.pickle',
+ 'dim': 100,
+ 'dim_kb': 5,
+ 'dim_word': 100,
+ 'dispFreq': 20,
+ 'embedding': '../emb/vectors_latest.txt',
+ 'encoder': 'lstm',
+ 'finish_after': 10000000,
+ 'kb_dicts': [],
+ 'keep_prob': 0.5,
+ 'last_layer': 'LSTM',
+ 'lrate': 0.04,
+ 'max_epochs': 5000,
+ 'maxlen': None,
+ 'n_words': 22671,
+ 'n_words_lemma': 100000,
+ 'optimizer': 'adam',
+ 'patience': 10,
+ 'reload_': True,
+ 'saveFreq': 45,
+ 'save_model': '../../models/',
+ 'saveto': './LSTM.npz',
+ 'tech_data': '../data/ding_new_10/technical.csv',
+ 'test_datasets': ['../data/ding_new_10/test.csv',
+                   '../data/ding_new_10/test_label.csv'],
+ 'types': 'title',
+ 'use_dropout': True,
+ 'validFreq': 45,
+ 'valid_batch_size': 32,
+ 'valid_datasets': ['../data/ding_new_10/validate.csv',
+                    '../data/ding_new_10/validate_label.csv'],
+ 'verbose': False,
+ 'wait_N': 1}
+2018-07-10 17:16:56,174: main_new: INFO: Loading data
+2018-07-10 17:17:01,117: main_new: INFO: init_word_embedding
+2018-07-10 17:17:03,880: main_new: INFO: Building f_cost...
+2018-07-10 17:17:03,899: main_new: INFO: Done
+2018-07-10 17:17:03,904: main_new: INFO: Building optimizers...
+2018-07-10 17:17:03,904: main_new: INFO: Done
+2018-07-10 17:17:06,356: main_new: INFO: correct_pred
+2018-07-10 17:17:06,357: main_new: INFO: Done
+2018-07-10 17:17:06,358: main_new: INFO: init variables
+2018-07-10 17:17:06,359: main_new: INFO: Done
+2018-07-10 17:17:18,500: main_new: DEBUG: Epoch 0 Update 20 Cost 1.4461314678192139 L2 1501.352294921875 TIME 0.23536181449890137
+2018-07-10 17:17:25,325: main_new: DEBUG: Epoch 0 Update 40 Cost 1.4217357635498047 L2 1491.0247802734375 TIME 0.25846362113952637
+2018-07-10 17:17:30,137: main_new: DEBUG: Epoch  0
+2018-07-10 17:17:30,137: main_new: DEBUG: Valid cost  1.4345039887861772
+2018-07-10 17:17:30,138: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:17:30,138: main_new: DEBUG: Test cost  1.4309571222825483
+2018-07-10 17:17:30,138: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:17:30,138: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:17:30,138: main_new: INFO: Saving...
+2018-07-10 17:17:30,597: main_new: INFO: ../../models/_epoch_0_model.ckpt
+2018-07-10 17:17:30,668: main_new: INFO: Done
+2018-07-10 17:17:30,668: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:17:30,668: main_new: DEBUG: Training accuracy:  0.5329553508150248
+2018-07-10 17:17:30,668: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:17:35,997: main_new: DEBUG: Epoch 1 Update 60 Cost 1.4144943952560425 L2 1479.758544921875 TIME 0.2375340461730957
+2018-07-10 17:17:42,796: main_new: DEBUG: Epoch 1 Update 80 Cost 1.4194607734680176 L2 1468.906005859375 TIME 0.2567017078399658
+2018-07-10 17:17:48,273: main_new: DEBUG: Epoch  1
+2018-07-10 17:17:48,273: main_new: DEBUG: Valid cost  1.421483343297785
+2018-07-10 17:17:48,273: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:17:48,273: main_new: DEBUG: Test cost  1.417067137631503
+2018-07-10 17:17:48,273: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:17:48,274: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:17:48,274: main_new: INFO: Saving...
+2018-07-10 17:17:48,665: main_new: INFO: ../../models/_epoch_1_model.ckpt
+2018-07-10 17:17:48,736: main_new: INFO: Done
+2018-07-10 17:17:48,736: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:17:48,737: main_new: DEBUG: Training accuracy:  0.5393338058114813
+2018-07-10 17:17:48,737: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:17:52,770: main_new: DEBUG: Epoch 2 Update 100 Cost 1.4283016920089722 L2 1458.038330078125 TIME 0.24340271949768066
+2018-07-10 17:17:59,479: main_new: DEBUG: Epoch 2 Update 120 Cost 1.4102394580841064 L2 1446.93310546875 TIME 0.247450590133667
+2018-07-10 17:18:06,320: main_new: DEBUG: Epoch  2
+2018-07-10 17:18:06,320: main_new: DEBUG: Valid cost  1.4086700136011296
+2018-07-10 17:18:06,320: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:18:06,320: main_new: DEBUG: Test cost  1.4036889509721235
+2018-07-10 17:18:06,320: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:18:06,320: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:18:06,320: main_new: INFO: Saving...
+2018-07-10 17:18:06,718: main_new: INFO: ../../models/_epoch_2_model.ckpt
+2018-07-10 17:18:06,783: main_new: INFO: Done
+2018-07-10 17:18:06,783: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:18:06,783: main_new: DEBUG: Training accuracy:  0.5308291991495393
+2018-07-10 17:18:06,783: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:18:09,353: main_new: DEBUG: Epoch 3 Update 140 Cost 1.4110051393508911 L2 1435.848388671875 TIME 0.243255615234375
+2018-07-10 17:18:16,075: main_new: DEBUG: Epoch 3 Update 160 Cost 1.3830840587615967 L2 1423.6982421875 TIME 0.23173141479492188
+2018-07-10 17:18:21,936: main_new: DEBUG: Epoch 3 Update 180 Cost 1.4214938879013062 L2 1411.840087890625 TIME 0.06729984283447266
+2018-07-10 17:18:24,381: main_new: DEBUG: Epoch  3
+2018-07-10 17:18:24,381: main_new: DEBUG: Valid cost  1.3954587958075784
+2018-07-10 17:18:24,381: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:18:24,381: main_new: DEBUG: Test cost  1.3898063789714465
+2018-07-10 17:18:24,381: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:18:24,381: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:18:24,381: main_new: INFO: Saving...
+2018-07-10 17:18:24,888: main_new: INFO: ../../models/_epoch_3_model.ckpt
+2018-07-10 17:18:24,965: main_new: INFO: Done
+2018-07-10 17:18:24,965: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:18:24,965: main_new: DEBUG: Training accuracy:  0.5513819985825655
+2018-07-10 17:18:24,965: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:18:31,717: main_new: DEBUG: Epoch 4 Update 200 Cost 1.3956364393234253 L2 1400.490234375 TIME 0.2749011516571045
+2018-07-10 17:18:38,654: main_new: DEBUG: Epoch 4 Update 220 Cost 1.3697401285171509 L2 1389.122802734375 TIME 0.237274169921875
+2018-07-10 17:18:42,685: main_new: DEBUG: Epoch  4
+2018-07-10 17:18:42,685: main_new: DEBUG: Valid cost  1.3825647614218972
+2018-07-10 17:18:42,685: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:18:42,685: main_new: DEBUG: Test cost  1.37673789804632
+2018-07-10 17:18:42,685: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:18:42,685: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:18:42,685: main_new: INFO: Saving...
+2018-07-10 17:18:43,087: main_new: INFO: ../../models/_epoch_4_model.ckpt
+2018-07-10 17:18:43,175: main_new: INFO: Done
+2018-07-10 17:18:43,175: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:18:43,175: main_new: DEBUG: Training accuracy:  0.5315379163713678
+2018-07-10 17:18:43,175: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:18:48,593: main_new: DEBUG: Epoch 5 Update 240 Cost 1.3847687244415283 L2 1377.756591796875 TIME 0.218825101852417
+2018-07-10 17:18:55,387: main_new: DEBUG: Epoch 5 Update 260 Cost 1.357795000076294 L2 1366.01611328125 TIME 0.22983551025390625
+2018-07-10 17:19:00,874: main_new: DEBUG: Epoch  5
+2018-07-10 17:19:00,874: main_new: DEBUG: Valid cost  1.369701710614291
+2018-07-10 17:19:00,874: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:19:00,874: main_new: DEBUG: Test cost  1.3636419447985562
+2018-07-10 17:19:00,874: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:19:00,874: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:19:00,874: main_new: INFO: Saving...
+2018-07-10 17:19:01,567: main_new: INFO: ../../models/_epoch_5_model.ckpt
+2018-07-10 17:19:01,643: main_new: INFO: Done
+2018-07-10 17:19:01,644: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:19:01,644: main_new: DEBUG: Training accuracy:  0.5364989369241673
+2018-07-10 17:19:01,644: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:19:05,647: main_new: DEBUG: Epoch 6 Update 280 Cost 1.3697068691253662 L2 1355.119140625 TIME 0.2552022933959961
+2018-07-10 17:19:12,432: main_new: DEBUG: Epoch 6 Update 300 Cost 1.3511210680007935 L2 1343.6082763671875 TIME 0.24445080757141113
+2018-07-10 17:19:19,393: main_new: DEBUG: Epoch  6
+2018-07-10 17:19:19,393: main_new: DEBUG: Valid cost  1.3569109114733608
+2018-07-10 17:19:19,393: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:19:19,393: main_new: DEBUG: Test cost  1.3506972789764404
+2018-07-10 17:19:19,393: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:19:19,393: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:19:19,393: main_new: INFO: Saving...
+2018-07-10 17:19:19,799: main_new: INFO: ../../models/_epoch_6_model.ckpt
+2018-07-10 17:19:19,890: main_new: INFO: Done
+2018-07-10 17:19:19,890: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:19:19,890: main_new: DEBUG: Training accuracy:  0.5464209780297661
+2018-07-10 17:19:19,890: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:19:22,369: main_new: DEBUG: Epoch 7 Update 320 Cost 1.3641620874404907 L2 1332.2998046875 TIME 0.2567410469055176
+2018-07-10 17:19:29,235: main_new: DEBUG: Epoch 7 Update 340 Cost 1.3323311805725098 L2 1320.50439453125 TIME 0.2604179382324219
+2018-07-10 17:19:34,990: main_new: DEBUG: Epoch 7 Update 360 Cost 1.3194184303283691 L2 1308.8248291015625 TIME 0.0789346694946289
+2018-07-10 17:19:37,438: main_new: DEBUG: Epoch  7
+2018-07-10 17:19:37,438: main_new: DEBUG: Valid cost  1.3438844030553645
+2018-07-10 17:19:37,438: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:19:37,438: main_new: DEBUG: Test cost  1.3372071873057971
+2018-07-10 17:19:37,438: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:19:37,438: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:19:37,438: main_new: INFO: Saving...
+2018-07-10 17:19:38,080: main_new: INFO: ../../models/_epoch_7_model.ckpt
+2018-07-10 17:19:38,157: main_new: INFO: Done
+2018-07-10 17:19:38,157: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:19:38,157: main_new: DEBUG: Training accuracy:  0.5457122608079377
+2018-07-10 17:19:38,157: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:19:44,970: main_new: DEBUG: Epoch 8 Update 380 Cost 1.3471328020095825 L2 1297.717529296875 TIME 0.24712252616882324
+2018-07-10 17:19:51,843: main_new: DEBUG: Epoch 8 Update 400 Cost 1.3318727016448975 L2 1286.5760498046875 TIME 0.2669944763183594
+2018-07-10 17:19:55,865: main_new: DEBUG: Epoch  8
+2018-07-10 17:19:55,865: main_new: DEBUG: Valid cost  1.3310963890769265
+2018-07-10 17:19:55,865: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:19:55,865: main_new: DEBUG: Test cost  1.3240883567116477
+2018-07-10 17:19:55,866: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:19:55,866: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:19:55,866: main_new: INFO: Saving...
+2018-07-10 17:19:56,265: main_new: INFO: ../../models/_epoch_8_model.ckpt
+2018-07-10 17:19:56,363: main_new: INFO: Done
+2018-07-10 17:19:56,364: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:19:56,364: main_new: DEBUG: Training accuracy:  0.5478384124734231
+2018-07-10 17:19:56,364: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:20:01,824: main_new: DEBUG: Epoch 9 Update 420 Cost 1.3213319778442383 L2 1274.90576171875 TIME 0.253110408782959
+2018-07-10 17:20:08,576: main_new: DEBUG: Epoch 9 Update 440 Cost 1.3009324073791504 L2 1263.6590576171875 TIME 0.24208807945251465
+2018-07-10 17:20:14,012: main_new: DEBUG: Epoch  9
+2018-07-10 17:20:14,013: main_new: DEBUG: Valid cost  1.3183075189590454
+2018-07-10 17:20:14,013: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:20:14,013: main_new: DEBUG: Test cost  1.3116618394851685
+2018-07-10 17:20:14,013: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:20:14,013: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:20:14,013: main_new: INFO: Saving...
+2018-07-10 17:20:14,652: main_new: INFO: ../../models/_epoch_9_model.ckpt
+2018-07-10 17:20:14,749: main_new: INFO: Done
+2018-07-10 17:20:14,749: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:20:14,749: main_new: DEBUG: Training accuracy:  0.5457122608079377
+2018-07-10 17:20:14,749: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:20:18,691: main_new: DEBUG: Epoch 10 Update 460 Cost 1.3177118301391602 L2 1252.5845947265625 TIME 0.2712407112121582
+2018-07-10 17:20:25,572: main_new: DEBUG: Epoch 10 Update 480 Cost 1.303532361984253 L2 1241.266845703125 TIME 0.2482154369354248
+2018-07-10 17:20:32,478: main_new: DEBUG: Epoch  10
+2018-07-10 17:20:32,479: main_new: DEBUG: Valid cost  1.305922811681574
+2018-07-10 17:20:32,479: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:20:32,479: main_new: DEBUG: Test cost  1.2990024523301558
+2018-07-10 17:20:32,479: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:20:32,479: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:20:32,479: main_new: INFO: Saving...
+2018-07-10 17:20:32,878: main_new: INFO: ../../models/_epoch_10_model.ckpt
+2018-07-10 17:20:32,966: main_new: INFO: Done
+2018-07-10 17:20:32,966: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:20:32,966: main_new: DEBUG: Training accuracy:  0.5393338058114813
+2018-07-10 17:20:32,966: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:20:35,515: main_new: DEBUG: Epoch 11 Update 500 Cost 1.3414430618286133 L2 1230.8582763671875 TIME 0.23750019073486328
+2018-07-10 17:20:42,316: main_new: DEBUG: Epoch 11 Update 520 Cost 1.3181333541870117 L2 1219.0927734375 TIME 0.2217998504638672
+2018-07-10 17:20:48,178: main_new: DEBUG: Epoch 11 Update 540 Cost 1.2422047853469849 L2 1207.833251953125 TIME 0.07760167121887207
+2018-07-10 17:20:50,657: main_new: DEBUG: Epoch  11
+2018-07-10 17:20:50,657: main_new: DEBUG: Valid cost  1.2934586676684292
+2018-07-10 17:20:50,657: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:20:50,657: main_new: DEBUG: Test cost  1.2866722670468418
+2018-07-10 17:20:50,657: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:20:50,657: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:20:50,657: main_new: INFO: Saving...
+2018-07-10 17:20:51,064: main_new: INFO: ../../models/_epoch_11_model.ckpt
+2018-07-10 17:20:51,225: main_new: INFO: Done
+2018-07-10 17:20:51,225: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:20:51,225: main_new: DEBUG: Training accuracy:  0.5400425230333097
+2018-07-10 17:20:51,226: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:20:58,025: main_new: DEBUG: Epoch 12 Update 560 Cost 1.2962768077850342 L2 1197.17626953125 TIME 0.25249528884887695
+2018-07-10 17:21:04,883: main_new: DEBUG: Epoch 12 Update 580 Cost 1.3001840114593506 L2 1186.387451171875 TIME 0.26511240005493164
+2018-07-10 17:21:08,979: main_new: DEBUG: Epoch  12
+2018-07-10 17:21:08,979: main_new: DEBUG: Valid cost  1.2812188538638027
+2018-07-10 17:21:08,979: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:21:08,980: main_new: DEBUG: Test cost  1.2745547077872537
+2018-07-10 17:21:08,980: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:21:08,980: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:21:08,980: main_new: INFO: Saving...
+2018-07-10 17:21:09,380: main_new: INFO: ../../models/_epoch_12_model.ckpt
+2018-07-10 17:21:09,448: main_new: INFO: Done
+2018-07-10 17:21:09,448: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:21:09,448: main_new: DEBUG: Training accuracy:  0.5421686746987951
+2018-07-10 17:21:09,448: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:21:14,843: main_new: DEBUG: Epoch 13 Update 600 Cost 1.2870781421661377 L2 1175.0921630859375 TIME 0.2709677219390869
+2018-07-10 17:21:21,762: main_new: DEBUG: Epoch 13 Update 620 Cost 1.2581579685211182 L2 1164.476806640625 TIME 0.2572929859161377
+2018-07-10 17:21:27,199: main_new: DEBUG: Epoch  13
+2018-07-10 17:21:27,199: main_new: DEBUG: Valid cost  1.2688322067260742
+2018-07-10 17:21:27,199: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:21:27,199: main_new: DEBUG: Test cost  1.262106028470126
+2018-07-10 17:21:27,199: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:21:27,199: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:21:27,199: main_new: INFO: Saving...
+2018-07-10 17:21:27,605: main_new: INFO: ../../models/_epoch_13_model.ckpt
+2018-07-10 17:21:27,713: main_new: INFO: Done
+2018-07-10 17:21:27,714: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:21:27,714: main_new: DEBUG: Training accuracy:  0.5471296952515946
+2018-07-10 17:21:27,714: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:21:31,724: main_new: DEBUG: Epoch 14 Update 640 Cost 1.2539820671081543 L2 1153.0675048828125 TIME 0.24908065795898438
+2018-07-10 17:21:38,414: main_new: DEBUG: Epoch 14 Update 660 Cost 1.2650442123413086 L2 1142.1104736328125 TIME 0.2115778923034668
+2018-07-10 17:21:45,322: main_new: DEBUG: Epoch  14
+2018-07-10 17:21:45,322: main_new: DEBUG: Valid cost  1.2564950422807173
+2018-07-10 17:21:45,322: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:21:45,322: main_new: DEBUG: Test cost  1.249554612419822
+2018-07-10 17:21:45,322: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:21:45,322: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:21:45,322: main_new: INFO: Saving...
+2018-07-10 17:21:45,732: main_new: INFO: ../../models/_epoch_14_model.ckpt
+2018-07-10 17:21:45,802: main_new: INFO: Done
+2018-07-10 17:21:45,802: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:21:45,802: main_new: DEBUG: Training accuracy:  0.5393338058114813
+2018-07-10 17:21:45,802: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:21:48,383: main_new: DEBUG: Epoch 15 Update 680 Cost 1.253686785697937 L2 1131.292724609375 TIME 0.2624335289001465
+2018-07-10 17:21:55,154: main_new: DEBUG: Epoch 15 Update 700 Cost 1.268721580505371 L2 1120.4327392578125 TIME 0.23986244201660156
+2018-07-10 17:22:01,063: main_new: DEBUG: Epoch 15 Update 720 Cost 1.1933887004852295 L2 1109.980712890625 TIME 0.06761598587036133
+2018-07-10 17:22:03,555: main_new: DEBUG: Epoch  15
+2018-07-10 17:22:03,556: main_new: DEBUG: Valid cost  1.2446671615947376
+2018-07-10 17:22:03,556: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:22:03,556: main_new: DEBUG: Test cost  1.2378822673450818
+2018-07-10 17:22:03,556: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:22:03,556: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:22:03,556: main_new: INFO: Saving...
+2018-07-10 17:22:03,969: main_new: INFO: ../../models/_epoch_15_model.ckpt
+2018-07-10 17:22:04,070: main_new: INFO: Done
+2018-07-10 17:22:04,070: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:22:04,070: main_new: DEBUG: Training accuracy:  0.5457122608079377
+2018-07-10 17:22:04,070: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:22:10,873: main_new: DEBUG: Epoch 16 Update 740 Cost 1.243393898010254 L2 1099.6361083984375 TIME 0.24068117141723633
+2018-07-10 17:22:17,710: main_new: DEBUG: Epoch 16 Update 760 Cost 1.2059690952301025 L2 1089.05224609375 TIME 0.23868465423583984
+2018-07-10 17:22:21,806: main_new: DEBUG: Epoch  16
+2018-07-10 17:22:21,806: main_new: DEBUG: Valid cost  1.232867804440585
+2018-07-10 17:22:21,806: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:22:21,806: main_new: DEBUG: Test cost  1.2260600328445435
+2018-07-10 17:22:21,806: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:22:21,807: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:22:21,807: main_new: INFO: Saving...
+2018-07-10 17:22:22,300: main_new: INFO: ../../models/_epoch_16_model.ckpt
+2018-07-10 17:22:22,365: main_new: INFO: Done
+2018-07-10 17:22:22,365: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:22:22,365: main_new: DEBUG: Training accuracy:  0.5478384124734231
+2018-07-10 17:22:22,365: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:22:27,677: main_new: DEBUG: Epoch 17 Update 780 Cost 1.2329862117767334 L2 1078.7427978515625 TIME 0.24894976615905762
+2018-07-10 17:22:34,553: main_new: DEBUG: Epoch 17 Update 800 Cost 1.224731206893921 L2 1067.9471435546875 TIME 0.25716090202331543
+2018-07-10 17:22:40,006: main_new: DEBUG: Epoch  17
+2018-07-10 17:22:40,006: main_new: DEBUG: Valid cost  1.2211284203962847
+2018-07-10 17:22:40,006: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:22:40,006: main_new: DEBUG: Test cost  1.214327422055331
+2018-07-10 17:22:40,006: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:22:40,006: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:22:40,006: main_new: INFO: Saving...
+2018-07-10 17:22:40,632: main_new: INFO: ../../models/_epoch_17_model.ckpt
+2018-07-10 17:22:40,735: main_new: INFO: Done
+2018-07-10 17:22:40,735: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:22:40,735: main_new: DEBUG: Training accuracy:  0.5471296952515946
+2018-07-10 17:22:40,735: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:22:44,616: main_new: DEBUG: Epoch 18 Update 820 Cost 1.2282347679138184 L2 1057.855224609375 TIME 0.23004841804504395
+2018-07-10 17:22:51,509: main_new: DEBUG: Epoch 18 Update 840 Cost 1.2033817768096924 L2 1047.78857421875 TIME 0.2554326057434082
+2018-07-10 17:22:58,453: main_new: DEBUG: Epoch  18
+2018-07-10 17:22:58,453: main_new: DEBUG: Valid cost  1.209753610871055
+2018-07-10 17:22:58,453: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:22:58,453: main_new: DEBUG: Test cost  1.2028752023523503
+2018-07-10 17:22:58,454: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:22:58,454: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:22:58,454: main_new: INFO: Saving...
+2018-07-10 17:22:58,860: main_new: INFO: ../../models/_epoch_18_model.ckpt
+2018-07-10 17:22:58,927: main_new: INFO: Done
+2018-07-10 17:22:58,927: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:22:58,927: main_new: DEBUG: Training accuracy:  0.5400425230333097
+2018-07-10 17:22:58,927: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:23:01,445: main_new: DEBUG: Epoch 19 Update 860 Cost 1.2064731121063232 L2 1038.008056640625 TIME 0.2672247886657715
+2018-07-10 17:23:08,257: main_new: DEBUG: Epoch 19 Update 880 Cost 1.1892549991607666 L2 1027.5047607421875 TIME 0.24968314170837402
+2018-07-10 17:23:14,152: main_new: DEBUG: Epoch 19 Update 900 Cost 1.2648791074752808 L2 1017.5429077148438 TIME 0.07604837417602539
+2018-07-10 17:23:16,641: main_new: DEBUG: Epoch  19
+2018-07-10 17:23:16,641: main_new: DEBUG: Valid cost  1.1985605521635576
+2018-07-10 17:23:16,641: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:23:16,641: main_new: DEBUG: Test cost  1.191749009219083
+2018-07-10 17:23:16,641: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:23:16,641: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:23:16,641: main_new: INFO: Saving...
+2018-07-10 17:23:17,046: main_new: INFO: ../../models/_epoch_19_model.ckpt
+2018-07-10 17:23:17,150: main_new: INFO: Done
+2018-07-10 17:23:17,150: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:23:17,150: main_new: DEBUG: Training accuracy:  0.5393338058114813
+2018-07-10 17:23:17,150: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:23:23,991: main_new: DEBUG: Epoch 20 Update 920 Cost 1.2014528512954712 L2 1007.7506103515625 TIME 0.26793408393859863
+2018-07-10 17:23:30,814: main_new: DEBUG: Epoch 20 Update 940 Cost 1.181765079498291 L2 998.2457885742188 TIME 0.25069475173950195
+2018-07-10 17:23:34,817: main_new: DEBUG: Epoch  20
+2018-07-10 17:23:34,817: main_new: DEBUG: Valid cost  1.1875870011069558
+2018-07-10 17:23:34,817: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:23:34,817: main_new: DEBUG: Test cost  1.18071157282049
+2018-07-10 17:23:34,817: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:23:34,817: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:23:34,817: main_new: INFO: Saving...
+2018-07-10 17:23:35,230: main_new: INFO: ../../models/_epoch_20_model.ckpt
+2018-07-10 17:23:35,298: main_new: INFO: Done
+2018-07-10 17:23:35,298: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:23:35,298: main_new: DEBUG: Training accuracy:  0.5450035435861091
+2018-07-10 17:23:35,298: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:23:40,596: main_new: DEBUG: Epoch 21 Update 960 Cost 1.202473521232605 L2 988.6820068359375 TIME 0.2372877597808838
+2018-07-10 17:23:47,602: main_new: DEBUG: Epoch 21 Update 980 Cost 1.1582756042480469 L2 978.6512451171875 TIME 0.2726864814758301
+2018-07-10 17:23:53,070: main_new: DEBUG: Epoch  21
+2018-07-10 17:23:53,070: main_new: DEBUG: Valid cost  1.1767587661743164
+2018-07-10 17:23:53,070: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:23:53,070: main_new: DEBUG: Test cost  1.1697882522236218
+2018-07-10 17:23:53,070: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:23:53,070: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:23:53,070: main_new: INFO: Saving...
+2018-07-10 17:23:53,477: main_new: INFO: ../../models/_epoch_21_model.ckpt
+2018-07-10 17:23:53,582: main_new: INFO: Done
+2018-07-10 17:23:53,582: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:23:53,582: main_new: DEBUG: Training accuracy:  0.5421686746987951
+2018-07-10 17:23:53,582: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:23:57,652: main_new: DEBUG: Epoch 22 Update 1000 Cost 1.1769053936004639 L2 969.232666015625 TIME 0.22512507438659668
+2018-07-10 17:24:04,406: main_new: DEBUG: Epoch 22 Update 1020 Cost 1.171096920967102 L2 959.648193359375 TIME 0.2654273509979248
+2018-07-10 17:24:11,233: main_new: DEBUG: Epoch  22
+2018-07-10 17:24:11,233: main_new: DEBUG: Valid cost  1.1659902225841174
+2018-07-10 17:24:11,233: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:24:11,233: main_new: DEBUG: Test cost  1.159005425193093
+2018-07-10 17:24:11,233: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:24:11,233: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:24:11,233: main_new: INFO: Saving...
+2018-07-10 17:24:11,645: main_new: INFO: ../../models/_epoch_22_model.ckpt
+2018-07-10 17:24:11,713: main_new: INFO: Done
+2018-07-10 17:24:11,713: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:24:11,713: main_new: DEBUG: Training accuracy:  0.5450035435861091
+2018-07-10 17:24:11,713: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:24:14,323: main_new: DEBUG: Epoch 23 Update 1040 Cost 1.1743898391723633 L2 950.425537109375 TIME 0.2470102310180664
+2018-07-10 17:24:21,184: main_new: DEBUG: Epoch 23 Update 1060 Cost 1.1673130989074707 L2 940.9048461914062 TIME 0.28752756118774414
+2018-07-10 17:24:27,128: main_new: DEBUG: Epoch 23 Update 1080 Cost 1.1257210969924927 L2 931.262939453125 TIME 0.07397842407226562
+2018-07-10 17:24:29,604: main_new: DEBUG: Epoch  23
+2018-07-10 17:24:29,604: main_new: DEBUG: Valid cost  1.1555181308226152
+2018-07-10 17:24:29,604: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:24:29,604: main_new: DEBUG: Test cost  1.1484270746057683
+2018-07-10 17:24:29,604: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:24:29,604: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:24:29,604: main_new: INFO: Saving...
+2018-07-10 17:24:30,004: main_new: INFO: ../../models/_epoch_23_model.ckpt
+2018-07-10 17:24:30,113: main_new: INFO: Done
+2018-07-10 17:24:30,114: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:24:30,114: main_new: DEBUG: Training accuracy:  0.5464209780297661
+2018-07-10 17:24:30,114: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:24:36,884: main_new: DEBUG: Epoch 24 Update 1100 Cost 1.1575220823287964 L2 922.1286010742188 TIME 0.2556123733520508
+2018-07-10 17:24:43,827: main_new: DEBUG: Epoch 24 Update 1120 Cost 1.1310137510299683 L2 913.045166015625 TIME 0.2497246265411377
+2018-07-10 17:24:47,822: main_new: DEBUG: Epoch  24
+2018-07-10 17:24:47,822: main_new: DEBUG: Valid cost  1.1451018398458308
+2018-07-10 17:24:47,822: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:24:47,822: main_new: DEBUG: Test cost  1.137842438437722
+2018-07-10 17:24:47,822: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:24:47,822: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:24:47,822: main_new: INFO: Saving...
+2018-07-10 17:24:48,236: main_new: INFO: ../../models/_epoch_24_model.ckpt
+2018-07-10 17:24:48,300: main_new: INFO: Done
+2018-07-10 17:24:48,301: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:24:48,301: main_new: DEBUG: Training accuracy:  0.5442948263642806
+2018-07-10 17:24:48,301: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:24:53,625: main_new: DEBUG: Epoch 25 Update 1140 Cost 1.1166284084320068 L2 903.7862548828125 TIME 0.26387786865234375
+2018-07-10 17:25:00,427: main_new: DEBUG: Epoch 25 Update 1160 Cost 1.1159389019012451 L2 895.0933837890625 TIME 0.2615787982940674
+2018-07-10 17:25:05,949: main_new: DEBUG: Epoch  25
+2018-07-10 17:25:05,949: main_new: DEBUG: Valid cost  1.1351783600720493
+2018-07-10 17:25:05,949: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:25:05,949: main_new: DEBUG: Test cost  1.1280296715823086
+2018-07-10 17:25:05,949: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:25:05,949: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:25:05,949: main_new: INFO: Saving...
+2018-07-10 17:25:06,354: main_new: INFO: ../../models/_epoch_25_model.ckpt
+2018-07-10 17:25:06,520: main_new: INFO: Done
+2018-07-10 17:25:06,520: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:25:06,520: main_new: DEBUG: Training accuracy:  0.5464209780297661
+2018-07-10 17:25:06,520: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:25:10,558: main_new: DEBUG: Epoch 26 Update 1180 Cost 1.1407335996627808 L2 886.2708740234375 TIME 0.22879600524902344
+2018-07-10 17:25:17,388: main_new: DEBUG: Epoch 26 Update 1200 Cost 1.144787073135376 L2 877.298583984375 TIME 0.2586359977722168
+2018-07-10 17:25:24,366: main_new: DEBUG: Epoch  26
+2018-07-10 17:25:24,367: main_new: DEBUG: Valid cost  1.1253412420099431
+2018-07-10 17:25:24,367: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:25:24,367: main_new: DEBUG: Test cost  1.1180571426044812
+2018-07-10 17:25:24,367: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:25:24,367: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:25:24,367: main_new: INFO: Saving...
+2018-07-10 17:25:24,997: main_new: INFO: ../../models/_epoch_26_model.ckpt
+2018-07-10 17:25:25,064: main_new: INFO: Done
+2018-07-10 17:25:25,064: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:25:25,064: main_new: DEBUG: Training accuracy:  0.5457122608079377
+2018-07-10 17:25:25,064: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:25:27,545: main_new: DEBUG: Epoch 27 Update 1220 Cost 1.1253875494003296 L2 868.9662475585938 TIME 0.23305988311767578
+2018-07-10 17:25:34,403: main_new: DEBUG: Epoch 27 Update 1240 Cost 1.1222161054611206 L2 860.6436157226562 TIME 0.2741856575012207
+2018-07-10 17:25:40,272: main_new: DEBUG: Epoch 27 Update 1260 Cost 1.1115843057632446 L2 851.804931640625 TIME 0.06424164772033691
+2018-07-10 17:25:42,768: main_new: DEBUG: Epoch  27
+2018-07-10 17:25:42,768: main_new: DEBUG: Valid cost  1.115894230929288
+2018-07-10 17:25:42,768: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:25:42,768: main_new: DEBUG: Test cost  1.108578703620217
+2018-07-10 17:25:42,768: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:25:42,768: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:25:42,768: main_new: INFO: Saving...
+2018-07-10 17:25:43,440: main_new: INFO: ../../models/_epoch_27_model.ckpt
+2018-07-10 17:25:43,526: main_new: INFO: Done
+2018-07-10 17:25:43,527: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:25:43,527: main_new: DEBUG: Training accuracy:  0.5457122608079377
+2018-07-10 17:25:43,527: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:25:50,373: main_new: DEBUG: Epoch 28 Update 1280 Cost 1.1131731271743774 L2 843.446533203125 TIME 0.25436973571777344
+2018-07-10 17:25:57,256: main_new: DEBUG: Epoch 28 Update 1300 Cost 1.081043004989624 L2 835.16552734375 TIME 0.2547609806060791
+2018-07-10 17:26:01,257: main_new: DEBUG: Epoch  28
+2018-07-10 17:26:01,257: main_new: DEBUG: Valid cost  1.106487599286166
+2018-07-10 17:26:01,257: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:26:01,257: main_new: DEBUG: Test cost  1.0990740602666682
+2018-07-10 17:26:01,257: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:26:01,257: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:26:01,257: main_new: INFO: Saving...
+2018-07-10 17:26:01,658: main_new: INFO: ../../models/_epoch_28_model.ckpt
+2018-07-10 17:26:01,742: main_new: INFO: Done
+2018-07-10 17:26:01,742: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:26:01,742: main_new: DEBUG: Training accuracy:  0.5442948263642806
+2018-07-10 17:26:01,742: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:26:07,196: main_new: DEBUG: Epoch 29 Update 1320 Cost 1.079693078994751 L2 826.675537109375 TIME 0.24567651748657227
+2018-07-10 17:26:13,969: main_new: DEBUG: Epoch 29 Update 1340 Cost 1.0969735383987427 L2 818.863037109375 TIME 0.2545297145843506
+2018-07-10 17:26:19,408: main_new: DEBUG: Epoch  29
+2018-07-10 17:26:19,408: main_new: DEBUG: Valid cost  1.09728665785356
+2018-07-10 17:26:19,408: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:26:19,408: main_new: DEBUG: Test cost  1.089807922189886
+2018-07-10 17:26:19,408: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:26:19,408: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:26:19,408: main_new: INFO: Saving...
+2018-07-10 17:26:20,072: main_new: INFO: ../../models/_epoch_29_model.ckpt
+2018-07-10 17:26:20,154: main_new: INFO: Done
+2018-07-10 17:26:20,154: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:26:20,155: main_new: DEBUG: Training accuracy:  0.5471296952515946
+2018-07-10 17:26:20,155: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:26:24,030: main_new: DEBUG: Epoch 30 Update 1360 Cost 1.1121602058410645 L2 810.748779296875 TIME 0.23347735404968262
+2018-07-10 17:26:30,832: main_new: DEBUG: Epoch 30 Update 1380 Cost 1.0832695960998535 L2 802.6375732421875 TIME 0.2668290138244629
+2018-07-10 17:26:37,742: main_new: DEBUG: Epoch  30
+2018-07-10 17:26:37,743: main_new: DEBUG: Valid cost  1.0882652456110173
+2018-07-10 17:26:37,743: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:26:37,743: main_new: DEBUG: Test cost  1.0808683958920566
+2018-07-10 17:26:37,743: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:26:37,743: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:26:37,743: main_new: INFO: Saving...
+2018-07-10 17:26:38,148: main_new: INFO: ../../models/_epoch_30_model.ckpt
+2018-07-10 17:26:38,261: main_new: INFO: Done
+2018-07-10 17:26:38,261: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:26:38,261: main_new: DEBUG: Training accuracy:  0.5485471296952515
+2018-07-10 17:26:38,261: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:26:40,790: main_new: DEBUG: Epoch 31 Update 1400 Cost 1.1066863536834717 L2 794.7538452148438 TIME 0.22778058052062988
+2018-07-10 17:26:47,661: main_new: DEBUG: Epoch 31 Update 1420 Cost 1.0953261852264404 L2 786.8876953125 TIME 0.24901771545410156
+2018-07-10 17:26:53,491: main_new: DEBUG: Epoch 31 Update 1440 Cost 1.0542240142822266 L2 779.013427734375 TIME 0.07457304000854492
+2018-07-10 17:26:55,946: main_new: DEBUG: Epoch  31
+2018-07-10 17:26:55,946: main_new: DEBUG: Valid cost  1.0795808055184104
+2018-07-10 17:26:55,946: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:26:55,946: main_new: DEBUG: Test cost  1.0719958435405383
+2018-07-10 17:26:55,946: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:26:55,946: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:26:55,946: main_new: INFO: Saving...
+2018-07-10 17:26:56,354: main_new: INFO: ../../models/_epoch_31_model.ckpt
+2018-07-10 17:26:56,455: main_new: INFO: Done
+2018-07-10 17:26:56,455: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:26:56,455: main_new: DEBUG: Training accuracy:  0.5435861091424522
+2018-07-10 17:26:56,455: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:27:03,316: main_new: DEBUG: Epoch 32 Update 1460 Cost 1.0928142070770264 L2 771.5308837890625 TIME 0.21877288818359375
+2018-07-10 17:27:10,162: main_new: DEBUG: Epoch 32 Update 1480 Cost 1.069749116897583 L2 764.37841796875 TIME 0.25463247299194336
+2018-07-10 17:27:14,183: main_new: DEBUG: Epoch  32
+2018-07-10 17:27:14,183: main_new: DEBUG: Valid cost  1.071223172274503
+2018-07-10 17:27:14,183: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:27:14,183: main_new: DEBUG: Test cost  1.0637847076762805
+2018-07-10 17:27:14,183: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:27:14,183: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:27:14,183: main_new: INFO: Saving...
+2018-07-10 17:27:14,662: main_new: INFO: ../../models/_epoch_32_model.ckpt
+2018-07-10 17:27:14,796: main_new: INFO: Done
+2018-07-10 17:27:14,796: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:27:14,796: main_new: DEBUG: Training accuracy:  0.5464209780297661
+2018-07-10 17:27:14,796: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:27:20,080: main_new: DEBUG: Epoch 33 Update 1500 Cost 1.079628825187683 L2 756.7945556640625 TIME 0.25863051414489746
+2018-07-10 17:27:27,004: main_new: DEBUG: Epoch 33 Update 1520 Cost 1.065409779548645 L2 749.3746948242188 TIME 0.2504134178161621
+2018-07-10 17:27:32,475: main_new: DEBUG: Epoch  33
+2018-07-10 17:27:32,475: main_new: DEBUG: Valid cost  1.062930172139948
+2018-07-10 17:27:32,476: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:27:32,476: main_new: DEBUG: Test cost  1.0556518923152576
+2018-07-10 17:27:32,476: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:27:32,476: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:27:32,476: main_new: INFO: Saving...
+2018-07-10 17:27:32,874: main_new: INFO: ../../models/_epoch_33_model.ckpt
+2018-07-10 17:27:32,944: main_new: INFO: Done
+2018-07-10 17:27:32,944: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:27:32,944: main_new: DEBUG: Training accuracy:  0.5414599574769667
+2018-07-10 17:27:32,944: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:27:36,886: main_new: DEBUG: Epoch 34 Update 1540 Cost 1.0576834678649902 L2 742.227294921875 TIME 0.24839377403259277
+2018-07-10 17:27:43,659: main_new: DEBUG: Epoch 34 Update 1560 Cost 1.042954683303833 L2 734.84765625 TIME 0.2560596466064453
+2018-07-10 17:27:50,676: main_new: DEBUG: Epoch  34
+2018-07-10 17:27:50,677: main_new: DEBUG: Valid cost  1.0549075169996782
+2018-07-10 17:27:50,677: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:27:50,677: main_new: DEBUG: Test cost  1.0475103855133057
+2018-07-10 17:27:50,677: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:27:50,677: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:27:50,677: main_new: INFO: Saving...
+2018-07-10 17:27:51,082: main_new: INFO: ../../models/_epoch_34_model.ckpt
+2018-07-10 17:27:51,151: main_new: INFO: Done
+2018-07-10 17:27:51,152: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:27:51,152: main_new: DEBUG: Training accuracy:  0.5457122608079377
+2018-07-10 17:27:51,152: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:27:53,770: main_new: DEBUG: Epoch 35 Update 1580 Cost 1.0649197101593018 L2 727.9042358398438 TIME 0.22754168510437012
+2018-07-10 17:28:00,506: main_new: DEBUG: Epoch 35 Update 1600 Cost 1.0269224643707275 L2 720.6563720703125 TIME 0.24514508247375488
+2018-07-10 17:28:06,358: main_new: DEBUG: Epoch 35 Update 1620 Cost 1.0820238590240479 L2 713.6241455078125 TIME 0.05935502052307129
+2018-07-10 17:28:08,813: main_new: DEBUG: Epoch  35
+2018-07-10 17:28:08,813: main_new: DEBUG: Valid cost  1.0470293977043845
+2018-07-10 17:28:08,813: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:28:08,813: main_new: DEBUG: Test cost  1.0394376841458408
+2018-07-10 17:28:08,813: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:28:08,813: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:28:08,813: main_new: INFO: Saving...
+2018-07-10 17:28:09,230: main_new: INFO: ../../models/_epoch_35_model.ckpt
+2018-07-10 17:28:09,305: main_new: INFO: Done
+2018-07-10 17:28:09,305: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:28:09,305: main_new: DEBUG: Training accuracy:  0.5478384124734231
+2018-07-10 17:28:09,305: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:28:16,182: main_new: DEBUG: Epoch 36 Update 1640 Cost 1.0556741952896118 L2 706.81103515625 TIME 0.2538330554962158
+2018-07-10 17:28:22,982: main_new: DEBUG: Epoch 36 Update 1660 Cost 1.067645788192749 L2 700.113525390625 TIME 0.23949813842773438
+2018-07-10 17:28:27,041: main_new: DEBUG: Epoch  36
+2018-07-10 17:28:27,041: main_new: DEBUG: Valid cost  1.039448543028398
+2018-07-10 17:28:27,041: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:28:27,041: main_new: DEBUG: Test cost  1.0319675315510144
+2018-07-10 17:28:27,041: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:28:27,041: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:28:27,041: main_new: INFO: Saving...
+2018-07-10 17:28:27,442: main_new: INFO: ../../models/_epoch_36_model.ckpt
+2018-07-10 17:28:27,521: main_new: INFO: Done
+2018-07-10 17:28:27,521: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:28:27,521: main_new: DEBUG: Training accuracy:  0.5435861091424522
+2018-07-10 17:28:27,521: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:28:32,919: main_new: DEBUG: Epoch 37 Update 1680 Cost 1.0551010370254517 L2 693.5966796875 TIME 0.22995638847351074
+2018-07-10 17:28:39,852: main_new: DEBUG: Epoch 37 Update 1700 Cost 1.0150103569030762 L2 686.9171752929688 TIME 0.2512955665588379
+2018-07-10 17:28:45,392: main_new: DEBUG: Epoch  37
+2018-07-10 17:28:45,393: main_new: DEBUG: Valid cost  1.0321501710198142
+2018-07-10 17:28:45,393: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:28:45,393: main_new: DEBUG: Test cost  1.0246444832194934
+2018-07-10 17:28:45,393: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:28:45,393: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:28:45,393: main_new: INFO: Saving...
+2018-07-10 17:28:45,804: main_new: INFO: ../../models/_epoch_37_model.ckpt
+2018-07-10 17:28:45,888: main_new: INFO: Done
+2018-07-10 17:28:45,889: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:28:45,889: main_new: DEBUG: Training accuracy:  0.5442948263642806
+2018-07-10 17:28:45,889: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:28:49,764: main_new: DEBUG: Epoch 38 Update 1720 Cost 1.01725172996521 L2 680.6007080078125 TIME 0.23580694198608398
+2018-07-10 17:28:56,723: main_new: DEBUG: Epoch 38 Update 1740 Cost 1.0268170833587646 L2 673.8765258789062 TIME 0.27745771408081055
+2018-07-10 17:29:03,583: main_new: DEBUG: Epoch  38
+2018-07-10 17:29:03,583: main_new: DEBUG: Valid cost  1.0249307589097456
+2018-07-10 17:29:03,583: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:29:03,583: main_new: DEBUG: Test cost  1.017042170871388
+2018-07-10 17:29:03,583: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:29:03,583: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:29:03,583: main_new: INFO: Saving...
+2018-07-10 17:29:03,998: main_new: INFO: ../../models/_epoch_38_model.ckpt
+2018-07-10 17:29:04,077: main_new: INFO: Done
+2018-07-10 17:29:04,077: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:29:04,077: main_new: DEBUG: Training accuracy:  0.5464209780297661
+2018-07-10 17:29:04,077: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:29:06,553: main_new: DEBUG: Epoch 39 Update 1760 Cost 1.0377740859985352 L2 667.9715576171875 TIME 0.21979427337646484
+2018-07-10 17:29:13,318: main_new: DEBUG: Epoch 39 Update 1780 Cost 1.0000581741333008 L2 661.5219116210938 TIME 0.2510569095611572
+2018-07-10 17:29:19,124: main_new: DEBUG: Epoch 39 Update 1800 Cost 1.0004844665527344 L2 655.2109985351562 TIME 0.060056447982788086
+2018-07-10 17:29:21,584: main_new: DEBUG: Epoch  39
+2018-07-10 17:29:21,584: main_new: DEBUG: Valid cost  1.0179356661709873
+2018-07-10 17:29:21,584: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:29:21,584: main_new: DEBUG: Test cost  1.0097473101182417
+2018-07-10 17:29:21,584: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:29:21,584: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:29:21,584: main_new: INFO: Saving...
+2018-07-10 17:29:22,007: main_new: INFO: ../../models/_epoch_39_model.ckpt
+2018-07-10 17:29:22,083: main_new: INFO: Done
+2018-07-10 17:29:22,083: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:29:22,083: main_new: DEBUG: Training accuracy:  0.5513819985825655
+2018-07-10 17:29:22,083: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:29:28,722: main_new: DEBUG: Epoch 40 Update 1820 Cost 1.0082783699035645 L2 649.1694946289062 TIME 0.21700358390808105
+2018-07-10 17:29:35,552: main_new: DEBUG: Epoch 40 Update 1840 Cost 1.0178478956222534 L2 643.1234130859375 TIME 0.25608372688293457
+2018-07-10 17:29:39,495: main_new: DEBUG: Epoch  40
+2018-07-10 17:29:39,495: main_new: DEBUG: Valid cost  1.0110852013934741
+2018-07-10 17:29:39,495: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:29:39,495: main_new: DEBUG: Test cost  1.002955675125122
+2018-07-10 17:29:39,495: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:29:39,495: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:29:39,495: main_new: INFO: Saving...
+2018-07-10 17:29:39,893: main_new: INFO: ../../models/_epoch_40_model.ckpt
+2018-07-10 17:29:39,966: main_new: INFO: Done
+2018-07-10 17:29:39,966: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:29:39,966: main_new: DEBUG: Training accuracy:  0.5457122608079377
+2018-07-10 17:29:39,966: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:29:45,210: main_new: DEBUG: Epoch 41 Update 1860 Cost 1.0314089059829712 L2 637.1064453125 TIME 0.23987817764282227
+2018-07-10 17:29:52,049: main_new: DEBUG: Epoch 41 Update 1880 Cost 1.0154609680175781 L2 631.2176513671875 TIME 0.2727506160736084
+2018-07-10 17:29:57,353: main_new: DEBUG: Epoch  41
+2018-07-10 17:29:57,353: main_new: DEBUG: Valid cost  1.0045510205355557
+2018-07-10 17:29:57,353: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:29:57,353: main_new: DEBUG: Test cost  0.9967599673704668
+2018-07-10 17:29:57,353: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:29:57,353: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:29:57,353: main_new: INFO: Saving...
+2018-07-10 17:29:57,763: main_new: INFO: ../../models/_epoch_41_model.ckpt
+2018-07-10 17:29:57,840: main_new: INFO: Done
+2018-07-10 17:29:57,841: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:29:57,841: main_new: DEBUG: Training accuracy:  0.5513819985825655
+2018-07-10 17:29:57,841: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:30:01,826: main_new: DEBUG: Epoch 42 Update 1900 Cost 0.9994770288467407 L2 625.2891845703125 TIME 0.2536799907684326
+2018-07-10 17:30:08,582: main_new: DEBUG: Epoch 42 Update 1920 Cost 0.9762511253356934 L2 619.7724609375 TIME 0.24606084823608398
+2018-07-10 17:30:15,304: main_new: DEBUG: Epoch  42
+2018-07-10 17:30:15,304: main_new: DEBUG: Valid cost  0.998196081681685
+2018-07-10 17:30:15,304: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:30:15,305: main_new: DEBUG: Test cost  0.9904632893475619
+2018-07-10 17:30:15,305: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:30:15,305: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:30:15,305: main_new: INFO: Saving...
+2018-07-10 17:30:15,706: main_new: INFO: ../../models/_epoch_42_model.ckpt
+2018-07-10 17:30:15,779: main_new: INFO: Done
+2018-07-10 17:30:15,779: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:30:15,779: main_new: DEBUG: Training accuracy:  0.5485471296952515
+2018-07-10 17:30:15,779: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:30:18,345: main_new: DEBUG: Epoch 43 Update 1940 Cost 0.9983921647071838 L2 614.1564331054688 TIME 0.2512366771697998
+2018-07-10 17:30:25,034: main_new: DEBUG: Epoch 43 Update 1960 Cost 0.9771801233291626 L2 608.487060546875 TIME 0.27129435539245605
+2018-07-10 17:30:30,817: main_new: DEBUG: Epoch 43 Update 1980 Cost 0.9637024998664856 L2 602.6989135742188 TIME 0.08087730407714844
+2018-07-10 17:30:33,215: main_new: DEBUG: Epoch  43
+2018-07-10 17:30:33,215: main_new: DEBUG: Valid cost  0.9918591325933283
+2018-07-10 17:30:33,215: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:30:33,215: main_new: DEBUG: Test cost  0.983699771490964
+2018-07-10 17:30:33,215: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:30:33,215: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:30:33,215: main_new: INFO: Saving...
+2018-07-10 17:30:33,612: main_new: INFO: ../../models/_epoch_43_model.ckpt
+2018-07-10 17:30:33,715: main_new: INFO: Done
+2018-07-10 17:30:33,716: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:30:33,716: main_new: DEBUG: Training accuracy:  0.5435861091424522
+2018-07-10 17:30:33,716: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:30:40,372: main_new: DEBUG: Epoch 44 Update 2000 Cost 0.9769077301025391 L2 597.250732421875 TIME 0.24433469772338867
+2018-07-10 17:30:47,202: main_new: DEBUG: Epoch 44 Update 2020 Cost 1.0065643787384033 L2 591.87451171875 TIME 0.2563302516937256
+2018-07-10 17:30:51,151: main_new: DEBUG: Epoch  44
+2018-07-10 17:30:51,151: main_new: DEBUG: Valid cost  0.9857499057596381
+2018-07-10 17:30:51,152: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:30:51,152: main_new: DEBUG: Test cost  0.9774366942319003
+2018-07-10 17:30:51,152: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:30:51,152: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:30:51,152: main_new: INFO: Saving...
+2018-07-10 17:30:51,552: main_new: INFO: ../../models/_epoch_44_model.ckpt
+2018-07-10 17:30:51,631: main_new: INFO: Done
+2018-07-10 17:30:51,631: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:30:51,632: main_new: DEBUG: Training accuracy:  0.5464209780297661
+2018-07-10 17:30:51,632: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:30:56,926: main_new: DEBUG: Epoch 45 Update 2040 Cost 0.9797228574752808 L2 586.47265625 TIME 0.24531936645507812
+2018-07-10 17:31:03,581: main_new: DEBUG: Epoch 45 Update 2060 Cost 0.9762445092201233 L2 581.281005859375 TIME 0.25354695320129395
+2018-07-10 17:31:08,987: main_new: DEBUG: Epoch  45
+2018-07-10 17:31:08,987: main_new: DEBUG: Valid cost  0.9798491217873313
+2018-07-10 17:31:08,987: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:31:08,987: main_new: DEBUG: Test cost  0.9715851545333862
+2018-07-10 17:31:08,987: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:31:08,987: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:31:08,987: main_new: INFO: Saving...
+2018-07-10 17:31:09,383: main_new: INFO: ../../models/_epoch_45_model.ckpt
+2018-07-10 17:31:09,516: main_new: INFO: Done
+2018-07-10 17:31:09,516: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:31:09,516: main_new: DEBUG: Training accuracy:  0.5421686746987951
+2018-07-10 17:31:09,516: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:31:13,446: main_new: DEBUG: Epoch 46 Update 2080 Cost 0.9762656688690186 L2 576.0733642578125 TIME 0.23795509338378906
+2018-07-10 17:31:20,196: main_new: DEBUG: Epoch 46 Update 2100 Cost 0.9695520401000977 L2 570.7603759765625 TIME 0.25086092948913574
+2018-07-10 17:31:26,923: main_new: DEBUG: Epoch  46
+2018-07-10 17:31:26,923: main_new: DEBUG: Valid cost  0.9740840521725741
+2018-07-10 17:31:26,924: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:31:26,924: main_new: DEBUG: Test cost  0.9658763787963174
+2018-07-10 17:31:26,924: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:31:26,924: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:31:26,924: main_new: INFO: Saving...
+2018-07-10 17:31:27,321: main_new: INFO: ../../models/_epoch_46_model.ckpt
+2018-07-10 17:31:27,395: main_new: INFO: Done
+2018-07-10 17:31:27,396: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:31:27,396: main_new: DEBUG: Training accuracy:  0.5499645641389086
+2018-07-10 17:31:27,396: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:31:29,968: main_new: DEBUG: Epoch 47 Update 2120 Cost 0.9731752872467041 L2 565.8502197265625 TIME 0.24843668937683105
+2018-07-10 17:31:36,592: main_new: DEBUG: Epoch 47 Update 2140 Cost 0.952558159828186 L2 560.8760986328125 TIME 0.25899744033813477
+2018-07-10 17:31:42,514: main_new: DEBUG: Epoch 47 Update 2160 Cost 0.9543667435646057 L2 555.9739990234375 TIME 0.07024168968200684
+2018-07-10 17:31:45,029: main_new: DEBUG: Epoch  47
+2018-07-10 17:31:45,029: main_new: DEBUG: Valid cost  0.9686913707039573
+2018-07-10 17:31:45,030: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:31:45,030: main_new: DEBUG: Test cost  0.9605915492231195
+2018-07-10 17:31:45,030: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:31:45,030: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:31:45,030: main_new: INFO: Saving...
+2018-07-10 17:31:45,431: main_new: INFO: ../../models/_epoch_47_model.ckpt
+2018-07-10 17:31:45,514: main_new: INFO: Done
+2018-07-10 17:31:45,514: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:31:45,514: main_new: DEBUG: Training accuracy:  0.5499645641389086
+2018-07-10 17:31:45,515: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:31:52,222: main_new: DEBUG: Epoch 48 Update 2180 Cost 0.9632840156555176 L2 551.139892578125 TIME 0.22832870483398438
+2018-07-10 17:31:58,986: main_new: DEBUG: Epoch 48 Update 2200 Cost 0.9389960765838623 L2 546.4927368164062 TIME 0.2569279670715332
+2018-07-10 17:32:03,031: main_new: DEBUG: Epoch  48
+2018-07-10 17:32:03,031: main_new: DEBUG: Valid cost  0.9633274403485385
+2018-07-10 17:32:03,031: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:32:03,031: main_new: DEBUG: Test cost  0.9550436084920709
+2018-07-10 17:32:03,031: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:32:03,031: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:32:03,031: main_new: INFO: Saving...
+2018-07-10 17:32:03,456: main_new: INFO: ../../models/_epoch_48_model.ckpt
+2018-07-10 17:32:03,528: main_new: INFO: Done
+2018-07-10 17:32:03,528: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:32:03,529: main_new: DEBUG: Training accuracy:  0.5492558469170801
+2018-07-10 17:32:03,529: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:32:08,736: main_new: DEBUG: Epoch 49 Update 2220 Cost 0.9805597066879272 L2 541.75244140625 TIME 0.2178347110748291
+2018-07-10 17:32:15,583: main_new: DEBUG: Epoch 49 Update 2240 Cost 0.9807400703430176 L2 537.2122802734375 TIME 0.2386927604675293
+2018-07-10 17:32:21,040: main_new: DEBUG: Epoch  49
+2018-07-10 17:32:21,040: main_new: DEBUG: Valid cost  0.9581538709727201
+2018-07-10 17:32:21,041: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:32:21,041: main_new: DEBUG: Test cost  0.9498397003520619
+2018-07-10 17:32:21,041: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:32:21,041: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:32:21,041: main_new: INFO: Saving...
+2018-07-10 17:32:21,455: main_new: INFO: ../../models/_epoch_49_model.ckpt
+2018-07-10 17:32:21,554: main_new: INFO: Done
+2018-07-10 17:32:21,554: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:32:21,554: main_new: DEBUG: Training accuracy:  0.5471296952515946
+2018-07-10 17:32:21,554: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:32:25,439: main_new: DEBUG: Epoch 50 Update 2260 Cost 0.9626944065093994 L2 532.5513305664062 TIME 0.24036955833435059
+2018-07-10 17:32:32,118: main_new: DEBUG: Epoch 50 Update 2280 Cost 0.9506003856658936 L2 528.117431640625 TIME 0.24545049667358398
+2018-07-10 17:32:39,036: main_new: DEBUG: Epoch  50
+2018-07-10 17:32:39,037: main_new: DEBUG: Valid cost  0.9531224586746909
+2018-07-10 17:32:39,037: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:32:39,037: main_new: DEBUG: Test cost  0.9446208693764426
+2018-07-10 17:32:39,037: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:32:39,037: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:32:39,037: main_new: INFO: Saving...
+2018-07-10 17:32:39,444: main_new: INFO: ../../models/_epoch_50_model.ckpt
+2018-07-10 17:32:39,522: main_new: INFO: Done
+2018-07-10 17:32:39,522: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:32:39,522: main_new: DEBUG: Training accuracy:  0.5499645641389086
+2018-07-10 17:32:39,522: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:32:42,091: main_new: DEBUG: Epoch 51 Update 2300 Cost 0.9195990562438965 L2 523.6478881835938 TIME 0.2484264373779297
+2018-07-10 17:32:48,753: main_new: DEBUG: Epoch 51 Update 2320 Cost 0.9542825222015381 L2 519.2078857421875 TIME 0.22704052925109863
+2018-07-10 17:32:54,610: main_new: DEBUG: Epoch 51 Update 2340 Cost 0.9908120036125183 L2 514.9114379882812 TIME 0.06411147117614746
+2018-07-10 17:32:57,084: main_new: DEBUG: Epoch  51
+2018-07-10 17:32:57,084: main_new: DEBUG: Valid cost  0.948297148401087
+2018-07-10 17:32:57,084: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:32:57,084: main_new: DEBUG: Test cost  0.9398830099539324
+2018-07-10 17:32:57,084: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:32:57,084: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:32:57,084: main_new: INFO: Saving...
+2018-07-10 17:32:57,509: main_new: INFO: ../../models/_epoch_51_model.ckpt
+2018-07-10 17:32:57,600: main_new: INFO: Done
+2018-07-10 17:32:57,600: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:32:57,600: main_new: DEBUG: Training accuracy:  0.5499645641389086
+2018-07-10 17:32:57,600: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:33:04,274: main_new: DEBUG: Epoch 52 Update 2360 Cost 0.9396975040435791 L2 510.57177734375 TIME 0.2644481658935547
+2018-07-10 17:33:10,988: main_new: DEBUG: Epoch 52 Update 2380 Cost 0.9358865022659302 L2 506.5050964355469 TIME 0.2591085433959961
+2018-07-10 17:33:15,061: main_new: DEBUG: Epoch  52
+2018-07-10 17:33:15,061: main_new: DEBUG: Valid cost  0.9435659484429793
+2018-07-10 17:33:15,061: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:33:15,061: main_new: DEBUG: Test cost  0.9349530285054987
+2018-07-10 17:33:15,061: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:33:15,062: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:33:15,062: main_new: INFO: Saving...
+2018-07-10 17:33:15,458: main_new: INFO: ../../models/_epoch_52_model.ckpt
+2018-07-10 17:33:15,577: main_new: INFO: Done
+2018-07-10 17:33:15,577: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:33:15,577: main_new: DEBUG: Training accuracy:  0.5478384124734231
+2018-07-10 17:33:15,577: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:33:20,863: main_new: DEBUG: Epoch 53 Update 2400 Cost 0.922366738319397 L2 502.5485534667969 TIME 0.2547342777252197
+2018-07-10 17:33:27,663: main_new: DEBUG: Epoch 53 Update 2420 Cost 0.9600977897644043 L2 498.39544677734375 TIME 0.25396275520324707
+2018-07-10 17:33:33,014: main_new: DEBUG: Epoch  53
+2018-07-10 17:33:33,014: main_new: DEBUG: Valid cost  0.9390501542524858
+2018-07-10 17:33:33,014: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:33:33,014: main_new: DEBUG: Test cost  0.9303786537863992
+2018-07-10 17:33:33,014: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:33:33,015: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:33:33,015: main_new: INFO: Saving...
+2018-07-10 17:33:33,416: main_new: INFO: ../../models/_epoch_53_model.ckpt
+2018-07-10 17:33:33,489: main_new: INFO: Done
+2018-07-10 17:33:33,489: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:33:33,489: main_new: DEBUG: Training accuracy:  0.5527994330262226
+2018-07-10 17:33:33,489: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:33:37,355: main_new: DEBUG: Epoch 54 Update 2440 Cost 0.9249063730239868 L2 494.29315185546875 TIME 0.26236867904663086
+2018-07-10 17:33:44,111: main_new: DEBUG: Epoch 54 Update 2460 Cost 0.9281380772590637 L2 490.3609313964844 TIME 0.25156450271606445
+2018-07-10 17:33:50,928: main_new: DEBUG: Epoch  54
+2018-07-10 17:33:50,928: main_new: DEBUG: Valid cost  0.9345705184069547
+2018-07-10 17:33:50,928: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:33:50,928: main_new: DEBUG: Test cost  0.9257927374406294
+2018-07-10 17:33:50,928: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:33:50,928: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:33:50,928: main_new: INFO: Saving...
+2018-07-10 17:33:51,329: main_new: INFO: ../../models/_epoch_54_model.ckpt
+2018-07-10 17:33:51,407: main_new: INFO: Done
+2018-07-10 17:33:51,407: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:33:51,407: main_new: DEBUG: Training accuracy:  0.5492558469170801
+2018-07-10 17:33:51,407: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:33:53,840: main_new: DEBUG: Epoch 55 Update 2480 Cost 0.9208719730377197 L2 486.4167175292969 TIME 0.21159076690673828
+2018-07-10 17:34:00,594: main_new: DEBUG: Epoch 55 Update 2500 Cost 0.9074519276618958 L2 482.331298828125 TIME 0.2532963752746582
+2018-07-10 17:34:06,412: main_new: DEBUG: Epoch 55 Update 2520 Cost 0.9079480171203613 L2 478.6372985839844 TIME 0.07321953773498535
+2018-07-10 17:34:08,896: main_new: DEBUG: Epoch  55
+2018-07-10 17:34:08,896: main_new: DEBUG: Valid cost  0.9303273016756232
+2018-07-10 17:34:08,896: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:34:08,896: main_new: DEBUG: Test cost  0.9214817935770209
+2018-07-10 17:34:08,896: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:34:08,896: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:34:08,896: main_new: INFO: Saving...
+2018-07-10 17:34:09,293: main_new: INFO: ../../models/_epoch_55_model.ckpt
+2018-07-10 17:34:09,371: main_new: INFO: Done
+2018-07-10 17:34:09,371: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:34:09,371: main_new: DEBUG: Training accuracy:  0.5492558469170801
+2018-07-10 17:34:09,371: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:34:16,106: main_new: DEBUG: Epoch 56 Update 2540 Cost 0.9259405136108398 L2 474.9464111328125 TIME 0.2454051971435547
+2018-07-10 17:34:22,859: main_new: DEBUG: Epoch 56 Update 2560 Cost 0.9106643199920654 L2 471.2940673828125 TIME 0.23556804656982422
+2018-07-10 17:34:26,836: main_new: DEBUG: Epoch  56
+2018-07-10 17:34:26,837: main_new: DEBUG: Valid cost  0.9261776425621726
+2018-07-10 17:34:26,837: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:34:26,837: main_new: DEBUG: Test cost  0.9172524972395464
+2018-07-10 17:34:26,837: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:34:26,837: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:34:26,837: main_new: INFO: Saving...
+2018-07-10 17:34:27,237: main_new: INFO: ../../models/_epoch_56_model.ckpt
+2018-07-10 17:34:27,359: main_new: INFO: Done
+2018-07-10 17:34:27,360: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:34:27,360: main_new: DEBUG: Training accuracy:  0.5520907158043941
+2018-07-10 17:34:27,360: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:34:32,615: main_new: DEBUG: Epoch 57 Update 2580 Cost 0.9132214188575745 L2 467.6549072265625 TIME 0.24663567543029785
+2018-07-10 17:34:39,423: main_new: DEBUG: Epoch 57 Update 2600 Cost 0.9226596355438232 L2 464.1106262207031 TIME 0.254774808883667
+2018-07-10 17:34:44,817: main_new: DEBUG: Epoch  57
+2018-07-10 17:34:44,817: main_new: DEBUG: Valid cost  0.9221622564575889
+2018-07-10 17:34:44,817: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:34:44,817: main_new: DEBUG: Test cost  0.9132469946687872
+2018-07-10 17:34:44,817: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:34:44,817: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:34:44,817: main_new: INFO: Saving...
+2018-07-10 17:34:45,215: main_new: INFO: ../../models/_epoch_57_model.ckpt
+2018-07-10 17:34:45,290: main_new: INFO: Done
+2018-07-10 17:34:45,291: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:34:45,291: main_new: DEBUG: Training accuracy:  0.5556343019135365
+2018-07-10 17:34:45,291: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:34:49,286: main_new: DEBUG: Epoch 58 Update 2620 Cost 0.917256236076355 L2 460.5753173828125 TIME 0.2555060386657715
+2018-07-10 17:34:56,011: main_new: DEBUG: Epoch 58 Update 2640 Cost 0.8897988796234131 L2 456.9515075683594 TIME 0.2517085075378418
+2018-07-10 17:35:02,724: main_new: DEBUG: Epoch  58
+2018-07-10 17:35:02,724: main_new: DEBUG: Valid cost  0.9183480685407465
+2018-07-10 17:35:02,724: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:35:02,724: main_new: DEBUG: Test cost  0.9097068960016425
+2018-07-10 17:35:02,724: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:35:02,724: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:35:02,724: main_new: INFO: Saving...
+2018-07-10 17:35:03,124: main_new: INFO: ../../models/_epoch_58_model.ckpt
+2018-07-10 17:35:03,204: main_new: INFO: Done
+2018-07-10 17:35:03,204: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:35:03,204: main_new: DEBUG: Training accuracy:  0.5492558469170801
+2018-07-10 17:35:03,204: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:35:05,797: main_new: DEBUG: Epoch 59 Update 2660 Cost 0.9176139831542969 L2 453.59088134765625 TIME 0.24080610275268555
+2018-07-10 17:35:12,414: main_new: DEBUG: Epoch 59 Update 2680 Cost 0.9282621145248413 L2 450.04193115234375 TIME 0.24719452857971191
+2018-07-10 17:35:18,253: main_new: DEBUG: Epoch 59 Update 2700 Cost 0.9111089706420898 L2 446.7196044921875 TIME 0.08767461776733398
+2018-07-10 17:35:20,650: main_new: DEBUG: Epoch  59
+2018-07-10 17:35:20,650: main_new: DEBUG: Valid cost  0.91465670412237
+2018-07-10 17:35:20,650: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:35:20,650: main_new: DEBUG: Test cost  0.9059523344039917
+2018-07-10 17:35:20,650: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:35:20,651: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:35:20,651: main_new: INFO: Saving...
+2018-07-10 17:35:21,048: main_new: INFO: ../../models/_epoch_59_model.ckpt
+2018-07-10 17:35:21,126: main_new: INFO: Done
+2018-07-10 17:35:21,127: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:35:21,127: main_new: DEBUG: Training accuracy:  0.5605953224663359
+2018-07-10 17:35:21,127: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:35:27,874: main_new: DEBUG: Epoch 60 Update 2720 Cost 0.9159371852874756 L2 443.40887451171875 TIME 0.21934175491333008
+2018-07-10 17:35:34,614: main_new: DEBUG: Epoch 60 Update 2740 Cost 0.8822885751724243 L2 440.29840087890625 TIME 0.24245953559875488
+2018-07-10 17:35:38,678: main_new: DEBUG: Epoch  60
+2018-07-10 17:35:38,678: main_new: DEBUG: Valid cost  0.9110782796686346
+2018-07-10 17:35:38,678: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:35:38,678: main_new: DEBUG: Test cost  0.9023636850443754
+2018-07-10 17:35:38,678: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:35:38,678: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:35:38,678: main_new: INFO: Saving...
+2018-07-10 17:35:39,073: main_new: INFO: ../../models/_epoch_60_model.ckpt
+2018-07-10 17:35:39,136: main_new: INFO: Done
+2018-07-10 17:35:39,136: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:35:39,136: main_new: DEBUG: Training accuracy:  0.5570517363571935
+2018-07-10 17:35:39,136: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:35:44,365: main_new: DEBUG: Epoch 61 Update 2760 Cost 0.9071632027626038 L2 436.9770812988281 TIME 0.22258281707763672
+2018-07-10 17:35:51,158: main_new: DEBUG: Epoch 61 Update 2780 Cost 0.8974820375442505 L2 433.90069580078125 TIME 0.23145365715026855
+2018-07-10 17:35:56,610: main_new: DEBUG: Epoch  61
+2018-07-10 17:35:56,610: main_new: DEBUG: Valid cost  0.9075013615868308
+2018-07-10 17:35:56,610: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:35:56,610: main_new: DEBUG: Test cost  0.8983071338046681
+2018-07-10 17:35:56,610: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:35:56,610: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:35:56,610: main_new: INFO: Saving...
+2018-07-10 17:35:57,013: main_new: INFO: ../../models/_epoch_61_model.ckpt
+2018-07-10 17:35:57,072: main_new: INFO: Done
+2018-07-10 17:35:57,072: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:35:57,072: main_new: DEBUG: Training accuracy:  0.5520907158043941
+2018-07-10 17:35:57,072: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:36:00,936: main_new: DEBUG: Epoch 62 Update 2800 Cost 0.8851867914199829 L2 430.76397705078125 TIME 0.2351071834564209
+2018-07-10 17:36:07,693: main_new: DEBUG: Epoch 62 Update 2820 Cost 0.876559853553772 L2 427.7685241699219 TIME 0.24341678619384766
+2018-07-10 17:36:14,470: main_new: DEBUG: Epoch  62
+2018-07-10 17:36:14,470: main_new: DEBUG: Valid cost  0.9041935151273554
+2018-07-10 17:36:14,470: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:36:14,470: main_new: DEBUG: Test cost  0.8950166431340304
+2018-07-10 17:36:14,470: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:36:14,470: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:36:14,470: main_new: INFO: Saving...
+2018-07-10 17:36:14,867: main_new: INFO: ../../models/_epoch_62_model.ckpt
+2018-07-10 17:36:14,922: main_new: INFO: Done
+2018-07-10 17:36:14,923: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:36:14,923: main_new: DEBUG: Training accuracy:  0.554925584691708
+2018-07-10 17:36:14,923: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:36:17,363: main_new: DEBUG: Epoch 63 Update 2840 Cost 0.9073739051818848 L2 424.83782958984375 TIME 0.25178027153015137
+2018-07-10 17:36:24,169: main_new: DEBUG: Epoch 63 Update 2860 Cost 0.9148868322372437 L2 421.8245849609375 TIME 0.25527358055114746
+2018-07-10 17:36:29,907: main_new: DEBUG: Epoch 63 Update 2880 Cost 0.9717574119567871 L2 418.8520812988281 TIME 0.0740654468536377
+2018-07-10 17:36:32,344: main_new: DEBUG: Epoch  63
+2018-07-10 17:36:32,344: main_new: DEBUG: Valid cost  0.9009369232437827
+2018-07-10 17:36:32,344: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:36:32,344: main_new: DEBUG: Test cost  0.8917518095536665
+2018-07-10 17:36:32,344: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:36:32,344: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:36:32,344: main_new: INFO: Saving...
+2018-07-10 17:36:32,746: main_new: INFO: ../../models/_epoch_63_model.ckpt
+2018-07-10 17:36:32,815: main_new: INFO: Done
+2018-07-10 17:36:32,815: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:36:32,815: main_new: DEBUG: Training accuracy:  0.5577604535790219
+2018-07-10 17:36:32,815: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:36:39,555: main_new: DEBUG: Epoch 64 Update 2900 Cost 0.891653299331665 L2 415.9820556640625 TIME 0.24431395530700684
+2018-07-10 17:36:46,426: main_new: DEBUG: Epoch 64 Update 2920 Cost 0.8778103590011597 L2 413.1404113769531 TIME 0.26107025146484375
+2018-07-10 17:36:50,446: main_new: DEBUG: Epoch  64
+2018-07-10 17:36:50,446: main_new: DEBUG: Valid cost  0.8977371779355136
+2018-07-10 17:36:50,446: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:36:50,446: main_new: DEBUG: Test cost  0.8884225216778842
+2018-07-10 17:36:50,446: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:36:50,446: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:36:50,446: main_new: INFO: Saving...
+2018-07-10 17:36:50,847: main_new: INFO: ../../models/_epoch_64_model.ckpt
+2018-07-10 17:36:50,911: main_new: INFO: Done
+2018-07-10 17:36:50,912: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:36:50,912: main_new: DEBUG: Training accuracy:  0.5513819985825655
+2018-07-10 17:36:50,912: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:36:56,307: main_new: DEBUG: Epoch 65 Update 2940 Cost 0.8818613290786743 L2 410.23992919921875 TIME 0.2623317241668701
+2018-07-10 17:37:03,128: main_new: DEBUG: Epoch 65 Update 2960 Cost 0.8869034647941589 L2 407.48846435546875 TIME 0.2194654941558838
+2018-07-10 17:37:08,585: main_new: DEBUG: Epoch  65
+2018-07-10 17:37:08,585: main_new: DEBUG: Valid cost  0.8946422663601962
+2018-07-10 17:37:08,585: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:37:08,585: main_new: DEBUG: Test cost  0.8847780119289052
+2018-07-10 17:37:08,585: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:37:08,585: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:37:08,585: main_new: INFO: Saving...
+2018-07-10 17:37:08,991: main_new: INFO: ../../models/_epoch_65_model.ckpt
+2018-07-10 17:37:09,050: main_new: INFO: Done
+2018-07-10 17:37:09,050: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:37:09,050: main_new: DEBUG: Training accuracy:  0.5527994330262226
+2018-07-10 17:37:09,050: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:37:13,101: main_new: DEBUG: Epoch 66 Update 2980 Cost 0.882555365562439 L2 404.7172546386719 TIME 0.2396700382232666
+2018-07-10 17:37:19,844: main_new: DEBUG: Epoch 66 Update 3000 Cost 0.8957762718200684 L2 402.0821533203125 TIME 0.2572169303894043
+2018-07-10 17:37:26,740: main_new: DEBUG: Epoch  66
+2018-07-10 17:37:26,740: main_new: DEBUG: Valid cost  0.8917230692776766
+2018-07-10 17:37:26,740: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:37:26,740: main_new: DEBUG: Test cost  0.882161021232605
+2018-07-10 17:37:26,740: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:37:26,740: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:37:26,740: main_new: INFO: Saving...
+2018-07-10 17:37:27,157: main_new: INFO: ../../models/_epoch_66_model.ckpt
+2018-07-10 17:37:27,224: main_new: INFO: Done
+2018-07-10 17:37:27,224: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:37:27,224: main_new: DEBUG: Training accuracy:  0.5513819985825655
+2018-07-10 17:37:27,224: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:37:29,805: main_new: DEBUG: Epoch 67 Update 3020 Cost 0.8782901763916016 L2 399.55389404296875 TIME 0.24721503257751465
+2018-07-10 17:37:36,608: main_new: DEBUG: Epoch 67 Update 3040 Cost 0.8748692870140076 L2 396.79083251953125 TIME 0.24169206619262695
+2018-07-10 17:37:42,421: main_new: DEBUG: Epoch 67 Update 3060 Cost 0.9130365252494812 L2 394.2757568359375 TIME 0.0625145435333252
+2018-07-10 17:37:44,913: main_new: DEBUG: Epoch  67
+2018-07-10 17:37:44,913: main_new: DEBUG: Valid cost  0.8889145309274847
+2018-07-10 17:37:44,913: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:37:44,913: main_new: DEBUG: Test cost  0.8792498545213179
+2018-07-10 17:37:44,913: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:37:44,913: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:37:44,913: main_new: INFO: Saving...
+2018-07-10 17:37:45,313: main_new: INFO: ../../models/_epoch_67_model.ckpt
+2018-07-10 17:37:45,387: main_new: INFO: Done
+2018-07-10 17:37:45,387: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:37:45,387: main_new: DEBUG: Training accuracy:  0.5506732813607371
+2018-07-10 17:37:45,387: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:37:52,104: main_new: DEBUG: Epoch 68 Update 3080 Cost 0.8972631096839905 L2 391.69561767578125 TIME 0.2563483715057373
+2018-07-10 17:37:58,990: main_new: DEBUG: Epoch 68 Update 3100 Cost 0.8946884870529175 L2 389.36126708984375 TIME 0.23329639434814453
+2018-07-10 17:38:03,008: main_new: DEBUG: Epoch  68
+2018-07-10 17:38:03,008: main_new: DEBUG: Valid cost  0.886168815872886
+2018-07-10 17:38:03,008: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:38:03,008: main_new: DEBUG: Test cost  0.8765187209302728
+2018-07-10 17:38:03,008: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:38:03,008: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:38:03,008: main_new: INFO: Saving...
+2018-07-10 17:38:03,409: main_new: INFO: ../../models/_epoch_68_model.ckpt
+2018-07-10 17:38:03,474: main_new: INFO: Done
+2018-07-10 17:38:03,474: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:38:03,474: main_new: DEBUG: Training accuracy:  0.556343019135365
+2018-07-10 17:38:03,474: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:38:08,964: main_new: DEBUG: Epoch 69 Update 3120 Cost 0.8803361058235168 L2 386.7850341796875 TIME 0.24417424201965332
+2018-07-10 17:38:15,636: main_new: DEBUG: Epoch 69 Update 3140 Cost 0.8741233348846436 L2 384.55377197265625 TIME 0.2515552043914795
+2018-07-10 17:38:21,173: main_new: DEBUG: Epoch  69
+2018-07-10 17:38:21,173: main_new: DEBUG: Valid cost  0.8836349899118597
+2018-07-10 17:38:21,173: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:38:21,173: main_new: DEBUG: Test cost  0.8743750344623219
+2018-07-10 17:38:21,173: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:38:21,173: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:38:21,173: main_new: INFO: Saving...
+2018-07-10 17:38:21,574: main_new: INFO: ../../models/_epoch_69_model.ckpt
+2018-07-10 17:38:21,675: main_new: INFO: Done
+2018-07-10 17:38:21,675: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:38:21,675: main_new: DEBUG: Training accuracy:  0.553508150248051
+2018-07-10 17:38:21,675: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:38:25,632: main_new: DEBUG: Epoch 70 Update 3160 Cost 0.8489328622817993 L2 382.07012939453125 TIME 0.2370295524597168
+2018-07-10 17:38:32,480: main_new: DEBUG: Epoch 70 Update 3180 Cost 0.8658605813980103 L2 379.6650695800781 TIME 0.2586207389831543
+2018-07-10 17:38:39,442: main_new: DEBUG: Epoch  70
+2018-07-10 17:38:39,442: main_new: DEBUG: Valid cost  0.8809914588928223
+2018-07-10 17:38:39,442: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:38:39,442: main_new: DEBUG: Test cost  0.8713119246742942
+2018-07-10 17:38:39,442: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:38:39,442: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:38:39,442: main_new: INFO: Saving...
+2018-07-10 17:38:39,849: main_new: INFO: ../../models/_epoch_70_model.ckpt
+2018-07-10 17:38:39,942: main_new: INFO: Done
+2018-07-10 17:38:39,942: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:38:39,942: main_new: DEBUG: Training accuracy:  0.5605953224663359
+2018-07-10 17:38:39,942: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:38:42,409: main_new: DEBUG: Epoch 71 Update 3200 Cost 0.874669075012207 L2 377.4837646484375 TIME 0.250760555267334
+2018-07-10 17:38:49,306: main_new: DEBUG: Epoch 71 Update 3220 Cost 0.864849328994751 L2 375.0163879394531 TIME 0.2722749710083008
+2018-07-10 17:38:55,141: main_new: DEBUG: Epoch 71 Update 3240 Cost 0.8013572692871094 L2 372.8085021972656 TIME 0.08029317855834961
+2018-07-10 17:38:57,621: main_new: DEBUG: Epoch  71
+2018-07-10 17:38:57,621: main_new: DEBUG: Valid cost  0.8785395947369662
+2018-07-10 17:38:57,622: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:38:57,622: main_new: DEBUG: Test cost  0.8688119975003329
+2018-07-10 17:38:57,622: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:38:57,622: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:38:57,622: main_new: INFO: Saving...
+2018-07-10 17:38:58,020: main_new: INFO: ../../models/_epoch_71_model.ckpt
+2018-07-10 17:38:58,078: main_new: INFO: Done
+2018-07-10 17:38:58,078: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:38:58,078: main_new: DEBUG: Training accuracy:  0.5556343019135365
+2018-07-10 17:38:58,078: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:39:04,846: main_new: DEBUG: Epoch 72 Update 3260 Cost 0.9012537002563477 L2 370.5645751953125 TIME 0.23543167114257812
+2018-07-10 17:39:11,725: main_new: DEBUG: Epoch 72 Update 3280 Cost 0.896019697189331 L2 368.4705505371094 TIME 0.23641443252563477
+2018-07-10 17:39:15,765: main_new: DEBUG: Epoch  72
+2018-07-10 17:39:15,765: main_new: DEBUG: Valid cost  0.8761420466683127
+2018-07-10 17:39:15,765: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:39:15,765: main_new: DEBUG: Test cost  0.8662179925224998
+2018-07-10 17:39:15,765: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:39:15,765: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:39:15,765: main_new: INFO: Saving...
+2018-07-10 17:39:16,169: main_new: INFO: ../../models/_epoch_72_model.ckpt
+2018-07-10 17:39:16,243: main_new: INFO: Done
+2018-07-10 17:39:16,243: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:39:16,243: main_new: DEBUG: Training accuracy:  0.5605953224663359
+2018-07-10 17:39:16,243: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:39:21,718: main_new: DEBUG: Epoch 73 Update 3300 Cost 0.8715224266052246 L2 366.17822265625 TIME 0.24773359298706055
+2018-07-10 17:39:28,463: main_new: DEBUG: Epoch 73 Update 3320 Cost 0.8646097183227539 L2 364.0603332519531 TIME 0.2781534194946289
+2018-07-10 17:39:33,906: main_new: DEBUG: Epoch  73
+2018-07-10 17:39:33,906: main_new: DEBUG: Valid cost  0.8738543662157926
+2018-07-10 17:39:33,906: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:39:33,906: main_new: DEBUG: Test cost  0.8641023202375933
+2018-07-10 17:39:33,906: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:39:33,906: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:39:33,906: main_new: INFO: Saving...
+2018-07-10 17:39:34,302: main_new: INFO: ../../models/_epoch_73_model.ckpt
+2018-07-10 17:39:34,368: main_new: INFO: Done
+2018-07-10 17:39:34,371: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:39:34,371: main_new: DEBUG: Training accuracy:  0.5577604535790219
+2018-07-10 17:39:34,371: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:39:38,434: main_new: DEBUG: Epoch 74 Update 3340 Cost 0.8719581961631775 L2 362.00286865234375 TIME 0.24269890785217285
+2018-07-10 17:39:45,182: main_new: DEBUG: Epoch 74 Update 3360 Cost 0.8382483720779419 L2 359.9461364746094 TIME 0.2516202926635742
+2018-07-10 17:39:52,031: main_new: DEBUG: Epoch  74
+2018-07-10 17:39:52,031: main_new: DEBUG: Valid cost  0.8715845129706643
+2018-07-10 17:39:52,031: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:39:52,032: main_new: DEBUG: Test cost  0.8615199435840953
+2018-07-10 17:39:52,032: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:39:52,032: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:39:52,032: main_new: INFO: Saving...
+2018-07-10 17:39:52,434: main_new: INFO: ../../models/_epoch_74_model.ckpt
+2018-07-10 17:39:52,496: main_new: INFO: Done
+2018-07-10 17:39:52,496: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:39:52,496: main_new: DEBUG: Training accuracy:  0.559177888022679
+2018-07-10 17:39:52,496: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:39:55,064: main_new: DEBUG: Epoch 75 Update 3380 Cost 0.8691059350967407 L2 357.9982604980469 TIME 0.2544562816619873
+2018-07-10 17:40:01,867: main_new: DEBUG: Epoch 75 Update 3400 Cost 0.8756981492042542 L2 355.857177734375 TIME 0.24005484580993652
+2018-07-10 17:40:07,768: main_new: DEBUG: Epoch 75 Update 3420 Cost 0.9023916125297546 L2 353.88055419921875 TIME 0.06689786911010742
+2018-07-10 17:40:10,231: main_new: DEBUG: Epoch  75
+2018-07-10 17:40:10,231: main_new: DEBUG: Valid cost  0.8693755269050598
+2018-07-10 17:40:10,231: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:40:10,231: main_new: DEBUG: Test cost  0.8589470819993452
+2018-07-10 17:40:10,231: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:40:10,231: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:40:10,231: main_new: INFO: Saving...
+2018-07-10 17:40:10,642: main_new: INFO: ../../models/_epoch_75_model.ckpt
+2018-07-10 17:40:10,701: main_new: INFO: Done
+2018-07-10 17:40:10,701: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:40:10,701: main_new: DEBUG: Training accuracy:  0.5598866052445074
+2018-07-10 17:40:10,701: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:40:17,483: main_new: DEBUG: Epoch 76 Update 3440 Cost 0.8602175116539001 L2 351.92974853515625 TIME 0.25282740592956543
+2018-07-10 17:40:24,347: main_new: DEBUG: Epoch 76 Update 3460 Cost 0.8533605337142944 L2 350.03192138671875 TIME 0.2745077610015869
+2018-07-10 17:40:28,343: main_new: DEBUG: Epoch  76
+2018-07-10 17:40:28,343: main_new: DEBUG: Valid cost  0.867330171845176
+2018-07-10 17:40:28,344: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:40:28,344: main_new: DEBUG: Test cost  0.8570870161056519
+2018-07-10 17:40:28,344: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:40:28,344: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:40:28,344: main_new: INFO: Saving...
+2018-07-10 17:40:28,747: main_new: INFO: ../../models/_epoch_76_model.ckpt
+2018-07-10 17:40:28,812: main_new: INFO: Done
+2018-07-10 17:40:28,812: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:40:28,812: main_new: DEBUG: Training accuracy:  0.5570517363571935
+2018-07-10 17:40:28,812: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:40:34,172: main_new: DEBUG: Epoch 77 Update 3480 Cost 0.8636713624000549 L2 348.1216735839844 TIME 0.21747875213623047
+2018-07-10 17:40:40,967: main_new: DEBUG: Epoch 77 Update 3500 Cost 0.8776630759239197 L2 346.3010559082031 TIME 0.23164844512939453
+2018-07-10 17:40:46,418: main_new: DEBUG: Epoch  77
+2018-07-10 17:40:46,418: main_new: DEBUG: Valid cost  0.8652347759767012
+2018-07-10 17:40:46,418: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:40:46,419: main_new: DEBUG: Test cost  0.8543808243491433
+2018-07-10 17:40:46,419: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:40:46,419: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:40:46,419: main_new: INFO: Saving...
+2018-07-10 17:40:46,819: main_new: INFO: ../../models/_epoch_77_model.ckpt
+2018-07-10 17:40:46,877: main_new: INFO: Done
+2018-07-10 17:40:46,878: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:40:46,878: main_new: DEBUG: Training accuracy:  0.5506732813607371
+2018-07-10 17:40:46,878: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:40:50,837: main_new: DEBUG: Epoch 78 Update 3520 Cost 0.8628705739974976 L2 344.521484375 TIME 0.2538797855377197
+2018-07-10 17:40:57,692: main_new: DEBUG: Epoch 78 Update 3540 Cost 0.8358985185623169 L2 342.6435546875 TIME 0.24867010116577148
+2018-07-10 17:41:04,632: main_new: DEBUG: Epoch  78
+2018-07-10 17:41:04,632: main_new: DEBUG: Valid cost  0.8633052598346364
+2018-07-10 17:41:04,633: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:41:04,633: main_new: DEBUG: Test cost  0.8522820472717285
+2018-07-10 17:41:04,633: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:41:04,633: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:41:04,633: main_new: INFO: Saving...
+2018-07-10 17:41:05,055: main_new: INFO: ../../models/_epoch_78_model.ckpt
+2018-07-10 17:41:05,138: main_new: INFO: Done
+2018-07-10 17:41:05,138: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:41:05,138: main_new: DEBUG: Training accuracy:  0.5620127569099929
+2018-07-10 17:41:05,138: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:41:07,683: main_new: DEBUG: Epoch 79 Update 3560 Cost 0.867204487323761 L2 340.9554443359375 TIME 0.22227692604064941
+2018-07-10 17:41:14,520: main_new: DEBUG: Epoch 79 Update 3580 Cost 0.8372743129730225 L2 339.0927429199219 TIME 0.2574145793914795
+2018-07-10 17:41:20,458: main_new: DEBUG: Epoch 79 Update 3600 Cost 0.8006684184074402 L2 337.355712890625 TIME 0.0677945613861084
+2018-07-10 17:41:22,840: main_new: DEBUG: Epoch  79
+2018-07-10 17:41:22,841: main_new: DEBUG: Valid cost  0.8614722707054832
+2018-07-10 17:41:22,841: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:41:22,841: main_new: DEBUG: Test cost  0.8505509495735168
+2018-07-10 17:41:22,841: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:41:22,841: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:41:22,841: main_new: INFO: Saving...
+2018-07-10 17:41:23,321: main_new: INFO: ../../models/_epoch_79_model.ckpt
+2018-07-10 17:41:23,381: main_new: INFO: Done
+2018-07-10 17:41:23,381: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:41:23,381: main_new: DEBUG: Training accuracy:  0.5605953224663359
+2018-07-10 17:41:23,381: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:41:30,155: main_new: DEBUG: Epoch 80 Update 3620 Cost 0.860632061958313 L2 335.6867370605469 TIME 0.22665643692016602
+2018-07-10 17:41:36,960: main_new: DEBUG: Epoch 80 Update 3640 Cost 0.8618991374969482 L2 334.0946960449219 TIME 0.2642338275909424
+2018-07-10 17:41:40,979: main_new: DEBUG: Epoch  80
+2018-07-10 17:41:40,979: main_new: DEBUG: Valid cost  0.8598103414882313
+2018-07-10 17:41:40,979: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:41:40,979: main_new: DEBUG: Test cost  0.8493689081885598
+2018-07-10 17:41:40,979: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:41:40,979: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:41:40,979: main_new: INFO: Saving...
+2018-07-10 17:41:41,378: main_new: INFO: ../../models/_epoch_80_model.ckpt
+2018-07-10 17:41:41,461: main_new: INFO: Done
+2018-07-10 17:41:41,462: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:41:41,462: main_new: DEBUG: Training accuracy:  0.5627214741318214
+2018-07-10 17:41:41,462: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:41:46,789: main_new: DEBUG: Epoch 81 Update 3660 Cost 0.857519805431366 L2 332.4283447265625 TIME 0.24741697311401367
+2018-07-10 17:41:53,710: main_new: DEBUG: Epoch 81 Update 3680 Cost 0.8266926407814026 L2 330.7691650390625 TIME 0.25328969955444336
+2018-07-10 17:41:59,149: main_new: DEBUG: Epoch  81
+2018-07-10 17:41:59,150: main_new: DEBUG: Valid cost  0.8579951633106578
+2018-07-10 17:41:59,150: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:41:59,150: main_new: DEBUG: Test cost  0.8470460989258506
+2018-07-10 17:41:59,150: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:41:59,150: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:41:59,150: main_new: INFO: Saving...
+2018-07-10 17:41:59,552: main_new: INFO: ../../models/_epoch_81_model.ckpt
+2018-07-10 17:41:59,616: main_new: INFO: Done
+2018-07-10 17:41:59,616: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:41:59,616: main_new: DEBUG: Training accuracy:  0.5662650602409639
+2018-07-10 17:41:59,616: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:42:03,654: main_new: DEBUG: Epoch 82 Update 3700 Cost 0.8406347632408142 L2 329.2550354003906 TIME 0.260387659072876
+2018-07-10 17:42:10,410: main_new: DEBUG: Epoch 82 Update 3720 Cost 0.8419817686080933 L2 327.6257629394531 TIME 0.2655985355377197
+2018-07-10 17:42:17,409: main_new: DEBUG: Epoch  82
+2018-07-10 17:42:17,409: main_new: DEBUG: Valid cost  0.8564474853602323
+2018-07-10 17:42:17,409: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:42:17,409: main_new: DEBUG: Test cost  0.8456469665874135
+2018-07-10 17:42:17,409: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:42:17,409: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:42:17,409: main_new: INFO: Saving...
+2018-07-10 17:42:17,809: main_new: INFO: ../../models/_epoch_82_model.ckpt
+2018-07-10 17:42:17,900: main_new: INFO: Done
+2018-07-10 17:42:17,900: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:42:17,900: main_new: DEBUG: Training accuracy:  0.5570517363571935
+2018-07-10 17:42:17,900: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:42:20,493: main_new: DEBUG: Epoch 83 Update 3740 Cost 0.8264799118041992 L2 326.09661865234375 TIME 0.2502150535583496
+2018-07-10 17:42:27,237: main_new: DEBUG: Epoch 83 Update 3760 Cost 0.872296929359436 L2 324.4673156738281 TIME 0.24893975257873535
+2018-07-10 17:42:33,110: main_new: DEBUG: Epoch 83 Update 3780 Cost 0.7903637886047363 L2 322.99908447265625 TIME 0.06736564636230469
+2018-07-10 17:42:35,559: main_new: DEBUG: Epoch  83
+2018-07-10 17:42:35,559: main_new: DEBUG: Valid cost  0.8548564856702631
+2018-07-10 17:42:35,559: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:42:35,559: main_new: DEBUG: Test cost  0.8440745364535939
+2018-07-10 17:42:35,559: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:42:35,559: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:42:35,559: main_new: INFO: Saving...
+2018-07-10 17:42:35,959: main_new: INFO: ../../models/_epoch_83_model.ckpt
+2018-07-10 17:42:36,028: main_new: INFO: Done
+2018-07-10 17:42:36,028: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:42:36,028: main_new: DEBUG: Training accuracy:  0.5598866052445074
+2018-07-10 17:42:36,028: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:42:42,812: main_new: DEBUG: Epoch 84 Update 3800 Cost 0.8335179090499878 L2 321.4892578125 TIME 0.24625539779663086
+2018-07-10 17:42:49,658: main_new: DEBUG: Epoch 84 Update 3820 Cost 0.8289931416511536 L2 320.10302734375 TIME 0.25301337242126465
+2018-07-10 17:42:53,784: main_new: DEBUG: Epoch  84
+2018-07-10 17:42:53,785: main_new: DEBUG: Valid cost  0.8533337007869374
+2018-07-10 17:42:53,785: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:42:53,785: main_new: DEBUG: Test cost  0.8424460020932284
+2018-07-10 17:42:53,785: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:42:53,785: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:42:53,785: main_new: INFO: Saving...
+2018-07-10 17:42:54,185: main_new: INFO: ../../models/_epoch_84_model.ckpt
+2018-07-10 17:42:54,307: main_new: INFO: Done
+2018-07-10 17:42:54,307: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:42:54,307: main_new: DEBUG: Training accuracy:  0.5584691708008505
+2018-07-10 17:42:54,308: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:42:59,612: main_new: DEBUG: Epoch 85 Update 3840 Cost 0.8504679799079895 L2 318.62054443359375 TIME 0.2662050724029541
+2018-07-10 17:43:06,429: main_new: DEBUG: Epoch 85 Update 3860 Cost 0.8440255522727966 L2 317.25384521484375 TIME 0.2139437198638916
+2018-07-10 17:43:12,065: main_new: DEBUG: Epoch  85
+2018-07-10 17:43:12,065: main_new: DEBUG: Valid cost  0.8518152128566395
+2018-07-10 17:43:12,065: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:43:12,065: main_new: DEBUG: Test cost  0.8407454544847662
+2018-07-10 17:43:12,065: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:43:12,065: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:43:12,065: main_new: INFO: Saving...
+2018-07-10 17:43:12,464: main_new: INFO: ../../models/_epoch_85_model.ckpt
+2018-07-10 17:43:12,525: main_new: INFO: Done
+2018-07-10 17:43:12,525: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:43:12,525: main_new: DEBUG: Training accuracy:  0.5648476257973069
+2018-07-10 17:43:12,525: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:43:16,430: main_new: DEBUG: Epoch 86 Update 3880 Cost 0.8532708883285522 L2 315.723388671875 TIME 0.22641801834106445
+2018-07-10 17:43:23,359: main_new: DEBUG: Epoch 86 Update 3900 Cost 0.8199423551559448 L2 314.3182373046875 TIME 0.23355889320373535
+2018-07-10 17:43:30,192: main_new: DEBUG: Epoch  86
+2018-07-10 17:43:30,192: main_new: DEBUG: Valid cost  0.8503116802735762
+2018-07-10 17:43:30,192: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:43:30,192: main_new: DEBUG: Test cost  0.8389810648831454
+2018-07-10 17:43:30,192: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:43:30,192: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:43:30,192: main_new: INFO: Saving...
+2018-07-10 17:43:30,591: main_new: INFO: ../../models/_epoch_86_model.ckpt
+2018-07-10 17:43:30,649: main_new: INFO: Done
+2018-07-10 17:43:30,649: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:43:30,649: main_new: DEBUG: Training accuracy:  0.5648476257973069
+2018-07-10 17:43:30,649: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:43:33,210: main_new: DEBUG: Epoch 87 Update 3920 Cost 0.8745037317276001 L2 312.9957275390625 TIME 0.2379443645477295
+2018-07-10 17:43:39,980: main_new: DEBUG: Epoch 87 Update 3940 Cost 0.8529636859893799 L2 311.62847900390625 TIME 0.23083090782165527
+2018-07-10 17:43:45,797: main_new: DEBUG: Epoch 87 Update 3960 Cost 0.7784810662269592 L2 310.3057861328125 TIME 0.06516122817993164
+2018-07-10 17:43:48,263: main_new: DEBUG: Epoch  87
+2018-07-10 17:43:48,264: main_new: DEBUG: Valid cost  0.8490020849487998
+2018-07-10 17:43:48,264: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:43:48,264: main_new: DEBUG: Test cost  0.8377056880430742
+2018-07-10 17:43:48,264: main_new: DEBUG: Test accuracy  0.5852272727272727
+2018-07-10 17:43:48,264: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:43:48,264: main_new: INFO: Saving...
+2018-07-10 17:43:48,660: main_new: INFO: ../../models/_epoch_87_model.ckpt
+2018-07-10 17:43:48,718: main_new: INFO: Done
+2018-07-10 17:43:48,718: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:43:48,718: main_new: DEBUG: Training accuracy:  0.5620127569099929
+2018-07-10 17:43:48,718: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:43:55,506: main_new: DEBUG: Epoch 88 Update 3980 Cost 0.8316224813461304 L2 308.9660339355469 TIME 0.23241043090820312
+2018-07-10 17:44:02,316: main_new: DEBUG: Epoch 88 Update 4000 Cost 0.8335214853286743 L2 307.7547607421875 TIME 0.2517266273498535
+2018-07-10 17:44:06,291: main_new: DEBUG: Epoch  88
+2018-07-10 17:44:06,292: main_new: DEBUG: Valid cost  0.8476061387495561
+2018-07-10 17:44:06,292: main_new: DEBUG: Valid accuracy  0.5397727272727273
+2018-07-10 17:44:06,292: main_new: DEBUG: Test cost  0.8358423493125222
+2018-07-10 17:44:06,292: main_new: DEBUG: Test accuracy  0.5795454545454546
+2018-07-10 17:44:06,292: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:44:06,292: main_new: INFO: Saving...
+2018-07-10 17:44:06,690: main_new: INFO: ../../models/_epoch_88_model.ckpt
+2018-07-10 17:44:06,753: main_new: INFO: Done
+2018-07-10 17:44:06,754: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:44:06,754: main_new: DEBUG: Training accuracy:  0.5634301913536499
+2018-07-10 17:44:06,754: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:44:12,161: main_new: DEBUG: Epoch 89 Update 4020 Cost 0.8382844924926758 L2 306.480712890625 TIME 0.24700403213500977
+2018-07-10 17:44:19,016: main_new: DEBUG: Epoch 89 Update 4040 Cost 0.8343728184700012 L2 305.24139404296875 TIME 0.2325127124786377
+2018-07-10 17:44:24,518: main_new: DEBUG: Epoch  89
+2018-07-10 17:44:24,518: main_new: DEBUG: Valid cost  0.8463899005543102
+2018-07-10 17:44:24,518: main_new: DEBUG: Valid accuracy  0.5568181818181818
+2018-07-10 17:44:24,518: main_new: DEBUG: Test cost  0.8348254994912581
+2018-07-10 17:44:24,518: main_new: DEBUG: Test accuracy  0.5965909090909091
+2018-07-10 17:44:24,518: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:44:24,518: main_new: INFO: Saving...
+2018-07-10 17:44:24,916: main_new: INFO: ../../models/_epoch_89_model.ckpt
+2018-07-10 17:44:24,978: main_new: INFO: Done
+2018-07-10 17:44:24,979: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:44:24,979: main_new: DEBUG: Training accuracy:  0.553508150248051
+2018-07-10 17:44:24,979: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:44:28,884: main_new: DEBUG: Epoch 90 Update 4060 Cost 0.8358304500579834 L2 303.98675537109375 TIME 0.2371807098388672
+2018-07-10 17:44:35,739: main_new: DEBUG: Epoch 90 Update 4080 Cost 0.838013768196106 L2 302.8275451660156 TIME 0.25504231452941895
+2018-07-10 17:44:42,709: main_new: DEBUG: Epoch  90
+2018-07-10 17:44:42,710: main_new: DEBUG: Valid cost  0.8452158787033774
+2018-07-10 17:44:42,710: main_new: DEBUG: Valid accuracy  0.5568181818181818
+2018-07-10 17:44:42,710: main_new: DEBUG: Test cost  0.8334719213572416
+2018-07-10 17:44:42,710: main_new: DEBUG: Test accuracy  0.6022727272727273
+2018-07-10 17:44:42,710: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:44:42,710: main_new: INFO: Saving...
+2018-07-10 17:44:43,118: main_new: INFO: ../../models/_epoch_90_model.ckpt
+2018-07-10 17:44:43,181: main_new: INFO: Done
+2018-07-10 17:44:43,181: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:44:43,181: main_new: DEBUG: Training accuracy:  0.5641389085754784
+2018-07-10 17:44:43,182: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:44:45,825: main_new: DEBUG: Epoch 91 Update 4100 Cost 0.8139368295669556 L2 301.6123046875 TIME 0.2608191967010498
+2018-07-10 17:44:52,623: main_new: DEBUG: Epoch 91 Update 4120 Cost 0.8602042198181152 L2 300.33868408203125 TIME 0.2550060749053955
+2018-07-10 17:44:58,418: main_new: DEBUG: Epoch 91 Update 4140 Cost 0.8307564854621887 L2 299.1980285644531 TIME 0.06788349151611328
+2018-07-10 17:45:00,893: main_new: DEBUG: Epoch  91
+2018-07-10 17:45:00,893: main_new: DEBUG: Valid cost  0.8441311662847345
+2018-07-10 17:45:00,893: main_new: DEBUG: Valid accuracy  0.5511363636363636
+2018-07-10 17:45:00,893: main_new: DEBUG: Test cost  0.8325473178516735
+2018-07-10 17:45:00,893: main_new: DEBUG: Test accuracy  0.6022727272727273
+2018-07-10 17:45:00,893: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:45:00,893: main_new: INFO: Saving...
+2018-07-10 17:45:01,294: main_new: INFO: ../../models/_epoch_91_model.ckpt
+2018-07-10 17:45:01,359: main_new: INFO: Done
+2018-07-10 17:45:01,359: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:45:01,359: main_new: DEBUG: Training accuracy:  0.5620127569099929
+2018-07-10 17:45:01,359: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:45:08,193: main_new: DEBUG: Epoch 92 Update 4160 Cost 0.8143978714942932 L2 298.033447265625 TIME 0.2480173110961914
+2018-07-10 17:45:15,023: main_new: DEBUG: Epoch 92 Update 4180 Cost 0.819726824760437 L2 296.9396667480469 TIME 0.2585759162902832
+2018-07-10 17:45:19,063: main_new: DEBUG: Epoch  92
+2018-07-10 17:45:19,063: main_new: DEBUG: Valid cost  0.8428201350298795
+2018-07-10 17:45:19,063: main_new: DEBUG: Valid accuracy  0.5568181818181818
+2018-07-10 17:45:19,063: main_new: DEBUG: Test cost  0.8305991454557939
+2018-07-10 17:45:19,063: main_new: DEBUG: Test accuracy  0.6022727272727273
+2018-07-10 17:45:19,063: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:45:19,063: main_new: INFO: Saving...
+2018-07-10 17:45:19,461: main_new: INFO: ../../models/_epoch_92_model.ckpt
+2018-07-10 17:45:19,549: main_new: INFO: Done
+2018-07-10 17:45:19,549: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:45:19,549: main_new: DEBUG: Training accuracy:  0.5662650602409639
+2018-07-10 17:45:19,549: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:45:25,005: main_new: DEBUG: Epoch 93 Update 4200 Cost 0.8513550758361816 L2 295.77490234375 TIME 0.22007536888122559
+2018-07-10 17:45:31,756: main_new: DEBUG: Epoch 93 Update 4220 Cost 0.8068236112594604 L2 294.67218017578125 TIME 0.24719595909118652
+2018-07-10 17:45:37,240: main_new: DEBUG: Epoch  93
+2018-07-10 17:45:37,240: main_new: DEBUG: Valid cost  0.8416494076902216
+2018-07-10 17:45:37,240: main_new: DEBUG: Valid accuracy  0.5568181818181818
+2018-07-10 17:45:37,240: main_new: DEBUG: Test cost  0.8292522430419922
+2018-07-10 17:45:37,240: main_new: DEBUG: Test accuracy  0.5965909090909091
+2018-07-10 17:45:37,240: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:45:37,240: main_new: INFO: Saving...
+2018-07-10 17:45:37,640: main_new: INFO: ../../models/_epoch_93_model.ckpt
+2018-07-10 17:45:37,700: main_new: INFO: Done
+2018-07-10 17:45:37,700: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:45:37,700: main_new: DEBUG: Training accuracy:  0.5690999291282778
+2018-07-10 17:45:37,700: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:45:41,699: main_new: DEBUG: Epoch 94 Update 4240 Cost 0.8241938948631287 L2 293.60205078125 TIME 0.2598285675048828
+2018-07-10 17:45:48,417: main_new: DEBUG: Epoch 94 Update 4260 Cost 0.7942078113555908 L2 292.51995849609375 TIME 0.2440812587738037
+2018-07-10 17:45:55,411: main_new: DEBUG: Epoch  94
+2018-07-10 17:45:55,411: main_new: DEBUG: Valid cost  0.8406006856398149
+2018-07-10 17:45:55,411: main_new: DEBUG: Valid accuracy  0.5511363636363636
+2018-07-10 17:45:55,411: main_new: DEBUG: Test cost  0.8281265280463479
+2018-07-10 17:45:55,411: main_new: DEBUG: Test accuracy  0.5965909090909091
+2018-07-10 17:45:55,411: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:45:55,411: main_new: INFO: Saving...
+2018-07-10 17:45:55,811: main_new: INFO: ../../models/_epoch_94_model.ckpt
+2018-07-10 17:45:55,899: main_new: INFO: Done
+2018-07-10 17:45:55,899: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:45:55,899: main_new: DEBUG: Training accuracy:  0.5641389085754784
+2018-07-10 17:45:55,899: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:45:58,446: main_new: DEBUG: Epoch 95 Update 4280 Cost 0.8221683502197266 L2 291.4217529296875 TIME 0.2579314708709717
+2018-07-10 17:46:05,201: main_new: DEBUG: Epoch 95 Update 4300 Cost 0.8302085399627686 L2 290.3771057128906 TIME 0.23027324676513672
+2018-07-10 17:46:11,198: main_new: DEBUG: Epoch 95 Update 4320 Cost 0.7835418581962585 L2 289.3670654296875 TIME 0.07604575157165527
+2018-07-10 17:46:13,659: main_new: DEBUG: Epoch  95
+2018-07-10 17:46:13,659: main_new: DEBUG: Valid cost  0.8394884954799305
+2018-07-10 17:46:13,659: main_new: DEBUG: Valid accuracy  0.5625
+2018-07-10 17:46:13,659: main_new: DEBUG: Test cost  0.8263759071176703
+2018-07-10 17:46:13,659: main_new: DEBUG: Test accuracy  0.6022727272727273
+2018-07-10 17:46:13,659: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:46:13,659: main_new: INFO: Saving...
+2018-07-10 17:46:14,060: main_new: INFO: ../../models/_epoch_95_model.ckpt
+2018-07-10 17:46:14,121: main_new: INFO: Done
+2018-07-10 17:46:14,122: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:46:14,122: main_new: DEBUG: Training accuracy:  0.5690999291282778
+2018-07-10 17:46:14,122: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:46:20,872: main_new: DEBUG: Epoch 96 Update 4340 Cost 0.8623484373092651 L2 288.3425598144531 TIME 0.2265474796295166
+2018-07-10 17:46:27,781: main_new: DEBUG: Epoch 96 Update 4360 Cost 0.7882565259933472 L2 287.38751220703125 TIME 0.2578582763671875
+2018-07-10 17:46:31,851: main_new: DEBUG: Epoch  96
+2018-07-10 17:46:31,852: main_new: DEBUG: Valid cost  0.8386528437787836
+2018-07-10 17:46:31,852: main_new: DEBUG: Valid accuracy  0.5511363636363636
+2018-07-10 17:46:31,852: main_new: DEBUG: Test cost  0.8258678100325845
+2018-07-10 17:46:31,852: main_new: DEBUG: Test accuracy  0.6022727272727273
+2018-07-10 17:46:31,852: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:46:31,852: main_new: INFO: Saving...
+2018-07-10 17:46:32,250: main_new: INFO: ../../models/_epoch_96_model.ckpt
+2018-07-10 17:46:32,331: main_new: INFO: Done
+2018-07-10 17:46:32,331: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:46:32,331: main_new: DEBUG: Training accuracy:  0.5598866052445074
+2018-07-10 17:46:32,331: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:46:37,808: main_new: DEBUG: Epoch 97 Update 4380 Cost 0.8125254511833191 L2 286.3940734863281 TIME 0.2511415481567383
+2018-07-10 17:46:44,613: main_new: DEBUG: Epoch 97 Update 4400 Cost 0.823499321937561 L2 285.392822265625 TIME 0.23292756080627441
+2018-07-10 17:46:50,031: main_new: DEBUG: Epoch  97
+2018-07-10 17:46:50,031: main_new: DEBUG: Valid cost  0.8374985293908552
+2018-07-10 17:46:50,031: main_new: DEBUG: Valid accuracy  0.5568181818181818
+2018-07-10 17:46:50,032: main_new: DEBUG: Test cost  0.8238956386392767
+2018-07-10 17:46:50,032: main_new: DEBUG: Test accuracy  0.6022727272727273
+2018-07-10 17:46:50,032: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:46:50,032: main_new: INFO: Saving...
+2018-07-10 17:46:50,448: main_new: INFO: ../../models/_epoch_97_model.ckpt
+2018-07-10 17:46:50,510: main_new: INFO: Done
+2018-07-10 17:46:50,510: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:46:50,510: main_new: DEBUG: Training accuracy:  0.5740609496810772
+2018-07-10 17:46:50,510: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:46:54,553: main_new: DEBUG: Epoch 98 Update 4420 Cost 0.7937905788421631 L2 284.39154052734375 TIME 0.24670195579528809
+2018-07-10 17:47:01,433: main_new: DEBUG: Epoch 98 Update 4440 Cost 0.8351242542266846 L2 283.4694519042969 TIME 0.2643239498138428
+2018-07-10 17:47:08,473: main_new: DEBUG: Epoch  98
+2018-07-10 17:47:08,473: main_new: DEBUG: Valid cost  0.8366214470429854
+2018-07-10 17:47:08,473: main_new: DEBUG: Valid accuracy  0.5511363636363636
+2018-07-10 17:47:08,473: main_new: DEBUG: Test cost  0.8227889700369402
+2018-07-10 17:47:08,473: main_new: DEBUG: Test accuracy  0.6022727272727273
+2018-07-10 17:47:08,474: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:47:08,474: main_new: INFO: Saving...
+2018-07-10 17:47:08,895: main_new: INFO: ../../models/_epoch_98_model.ckpt
+2018-07-10 17:47:08,979: main_new: INFO: Done
+2018-07-10 17:47:08,979: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:47:08,979: main_new: DEBUG: Training accuracy:  0.5669737774627923
+2018-07-10 17:47:08,979: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:47:11,519: main_new: DEBUG: Epoch 99 Update 4460 Cost 0.8479543924331665 L2 282.5359802246094 TIME 0.2546238899230957
+2018-07-10 17:47:18,173: main_new: DEBUG: Epoch 99 Update 4480 Cost 0.8241779804229736 L2 281.6004638671875 TIME 0.2524399757385254
+2018-07-10 17:47:24,162: main_new: DEBUG: Epoch 99 Update 4500 Cost 0.7168590426445007 L2 280.66326904296875 TIME 0.0621490478515625
+2018-07-10 17:47:26,645: main_new: DEBUG: Epoch  99
+2018-07-10 17:47:26,645: main_new: DEBUG: Valid cost  0.8358504880558361
+2018-07-10 17:47:26,645: main_new: DEBUG: Valid accuracy  0.5454545454545454
+2018-07-10 17:47:26,645: main_new: DEBUG: Test cost  0.822479248046875
+2018-07-10 17:47:26,645: main_new: DEBUG: Test accuracy  0.6022727272727273
+2018-07-10 17:47:26,645: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:47:26,645: main_new: INFO: Saving...
+2018-07-10 17:47:27,050: main_new: INFO: ../../models/_epoch_99_model.ckpt
+2018-07-10 17:47:27,109: main_new: INFO: Done
+2018-07-10 17:47:27,109: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:47:27,110: main_new: DEBUG: Training accuracy:  0.5669737774627923
+2018-07-10 17:47:27,110: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:47:33,940: main_new: DEBUG: Epoch 100 Update 4520 Cost 0.8341814279556274 L2 279.745849609375 TIME 0.25635194778442383
+2018-07-10 17:47:40,745: main_new: DEBUG: Epoch 100 Update 4540 Cost 0.8252193927764893 L2 278.92095947265625 TIME 0.2628340721130371
+2018-07-10 17:47:44,807: main_new: DEBUG: Epoch  100
+2018-07-10 17:47:44,807: main_new: DEBUG: Valid cost  0.8348573229529641
+2018-07-10 17:47:44,807: main_new: DEBUG: Valid accuracy  0.5568181818181818
+2018-07-10 17:47:44,807: main_new: DEBUG: Test cost  0.8209141926331953
+2018-07-10 17:47:44,807: main_new: DEBUG: Test accuracy  0.6022727272727273
+2018-07-10 17:47:44,807: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:47:44,807: main_new: INFO: Saving...
+2018-07-10 17:47:45,224: main_new: INFO: ../../models/_epoch_100_model.ckpt
+2018-07-10 17:47:45,303: main_new: INFO: Done
+2018-07-10 17:47:45,303: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:47:45,303: main_new: DEBUG: Training accuracy:  0.5655563430191354
+2018-07-10 17:47:45,303: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:47:50,578: main_new: DEBUG: Epoch 101 Update 4560 Cost 0.8161010146141052 L2 278.0318603515625 TIME 0.22733283042907715
+2018-07-10 17:47:57,475: main_new: DEBUG: Epoch 101 Update 4580 Cost 0.8535119295120239 L2 277.1800231933594 TIME 0.23894166946411133
+2018-07-10 17:48:02,884: main_new: DEBUG: Epoch  101
+2018-07-10 17:48:02,885: main_new: DEBUG: Valid cost  0.834292086687955
+2018-07-10 17:48:02,885: main_new: DEBUG: Valid accuracy  0.5340909090909091
+2018-07-10 17:48:02,885: main_new: DEBUG: Test cost  0.8208718679168008
+2018-07-10 17:48:02,885: main_new: DEBUG: Test accuracy  0.6022727272727273
+2018-07-10 17:48:02,885: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:48:02,885: main_new: INFO: Saving...
+2018-07-10 17:48:03,291: main_new: INFO: ../../models/_epoch_101_model.ckpt
+2018-07-10 17:48:03,364: main_new: INFO: Done
+2018-07-10 17:48:03,364: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:48:03,364: main_new: DEBUG: Training accuracy:  0.5676824946846208
+2018-07-10 17:48:03,364: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:48:07,340: main_new: DEBUG: Epoch 102 Update 4600 Cost 0.8007222414016724 L2 276.2952880859375 TIME 0.24593234062194824
+2018-07-10 17:48:14,258: main_new: DEBUG: Epoch 102 Update 4620 Cost 0.8035345077514648 L2 275.45098876953125 TIME 0.2627427577972412
+2018-07-10 17:48:21,051: main_new: DEBUG: Epoch  102
+2018-07-10 17:48:21,051: main_new: DEBUG: Valid cost  0.8333833759481256
+2018-07-10 17:48:21,051: main_new: DEBUG: Valid accuracy  0.5340909090909091
+2018-07-10 17:48:21,051: main_new: DEBUG: Test cost  0.8193736238913103
+2018-07-10 17:48:21,051: main_new: DEBUG: Test accuracy  0.6022727272727273
+2018-07-10 17:48:21,051: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:48:21,051: main_new: INFO: Saving...
+2018-07-10 17:48:21,477: main_new: INFO: ../../models/_epoch_102_model.ckpt
+2018-07-10 17:48:21,548: main_new: INFO: Done
+2018-07-10 17:48:21,548: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:48:21,548: main_new: DEBUG: Training accuracy:  0.5627214741318214
+2018-07-10 17:48:21,548: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:48:24,091: main_new: DEBUG: Epoch 103 Update 4640 Cost 0.7907883524894714 L2 274.66192626953125 TIME 0.23692679405212402
+2018-07-10 17:48:30,891: main_new: DEBUG: Epoch 103 Update 4660 Cost 0.8162646293640137 L2 273.7853088378906 TIME 0.2533907890319824
+2018-07-10 17:48:36,745: main_new: DEBUG: Epoch 103 Update 4680 Cost 0.7233932614326477 L2 273.0061340332031 TIME 0.07802081108093262
+2018-07-10 17:48:39,226: main_new: DEBUG: Epoch  103
+2018-07-10 17:48:39,226: main_new: DEBUG: Valid cost  0.8325907533819025
+2018-07-10 17:48:39,226: main_new: DEBUG: Valid accuracy  0.5511363636363636
+2018-07-10 17:48:39,226: main_new: DEBUG: Test cost  0.8181149092587557
+2018-07-10 17:48:39,226: main_new: DEBUG: Test accuracy  0.6022727272727273
+2018-07-10 17:48:39,226: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:48:39,226: main_new: INFO: Saving...
+2018-07-10 17:48:39,623: main_new: INFO: ../../models/_epoch_103_model.ckpt
+2018-07-10 17:48:39,699: main_new: INFO: Done
+2018-07-10 17:48:39,699: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:48:39,699: main_new: DEBUG: Training accuracy:  0.5648476257973069
+2018-07-10 17:48:39,699: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:48:46,484: main_new: DEBUG: Epoch 104 Update 4700 Cost 0.8110463619232178 L2 272.2048645019531 TIME 0.26132702827453613
+2018-07-10 17:48:53,308: main_new: DEBUG: Epoch 104 Update 4720 Cost 0.804311990737915 L2 271.486083984375 TIME 0.2163991928100586
+2018-07-10 17:48:57,345: main_new: DEBUG: Epoch  104
+2018-07-10 17:48:57,346: main_new: DEBUG: Valid cost  0.8320583972063932
+2018-07-10 17:48:57,346: main_new: DEBUG: Valid accuracy  0.5340909090909091
+2018-07-10 17:48:57,346: main_new: DEBUG: Test cost  0.817882938818498
+2018-07-10 17:48:57,346: main_new: DEBUG: Test accuracy  0.6022727272727273
+2018-07-10 17:48:57,346: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:48:57,346: main_new: INFO: Saving...
+2018-07-10 17:48:57,744: main_new: INFO: ../../models/_epoch_104_model.ckpt
+2018-07-10 17:48:57,822: main_new: INFO: Done
+2018-07-10 17:48:57,822: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:48:57,822: main_new: DEBUG: Training accuracy:  0.5712260807937632
+2018-07-10 17:48:57,822: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:49:03,246: main_new: DEBUG: Epoch 105 Update 4740 Cost 0.8461544513702393 L2 270.5708312988281 TIME 0.23968195915222168
+2018-07-10 17:49:10,046: main_new: DEBUG: Epoch 105 Update 4760 Cost 0.8288206458091736 L2 269.8994445800781 TIME 0.24683475494384766
+2018-07-10 17:49:15,524: main_new: DEBUG: Epoch  105
+2018-07-10 17:49:15,525: main_new: DEBUG: Valid cost  0.8314227624373003
+2018-07-10 17:49:15,525: main_new: DEBUG: Valid accuracy  0.5284090909090909
+2018-07-10 17:49:15,525: main_new: DEBUG: Test cost  0.8171689943833784
+2018-07-10 17:49:15,525: main_new: DEBUG: Test accuracy  0.6079545454545454
+2018-07-10 17:49:15,525: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:49:15,525: main_new: INFO: Saving...
+2018-07-10 17:49:15,930: main_new: INFO: ../../models/_epoch_105_model.ckpt
+2018-07-10 17:49:16,002: main_new: INFO: Done
+2018-07-10 17:49:16,002: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:49:16,002: main_new: DEBUG: Training accuracy:  0.5726435152374203
+2018-07-10 17:49:16,002: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:49:20,042: main_new: DEBUG: Epoch 106 Update 4780 Cost 0.8026121854782104 L2 269.1199035644531 TIME 0.24333572387695312
+2018-07-10 17:49:26,855: main_new: DEBUG: Epoch 106 Update 4800 Cost 0.8123605251312256 L2 268.35870361328125 TIME 0.23624062538146973
+2018-07-10 17:49:33,713: main_new: DEBUG: Epoch  106
+2018-07-10 17:49:33,713: main_new: DEBUG: Valid cost  0.8308042504570701
+2018-07-10 17:49:33,713: main_new: DEBUG: Valid accuracy  0.5284090909090909
+2018-07-10 17:49:33,713: main_new: DEBUG: Test cost  0.8164091326973655
+2018-07-10 17:49:33,713: main_new: DEBUG: Test accuracy  0.6022727272727273
+2018-07-10 17:49:33,713: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:49:33,713: main_new: INFO: Saving...
+2018-07-10 17:49:34,112: main_new: INFO: ../../models/_epoch_106_model.ckpt
+2018-07-10 17:49:34,174: main_new: INFO: Done
+2018-07-10 17:49:34,175: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:49:34,175: main_new: DEBUG: Training accuracy:  0.5740609496810772
+2018-07-10 17:49:34,175: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:49:36,751: main_new: DEBUG: Epoch 107 Update 4820 Cost 0.8140386343002319 L2 267.6183166503906 TIME 0.2379286289215088
+2018-07-10 17:49:43,533: main_new: DEBUG: Epoch 107 Update 4840 Cost 0.8077176213264465 L2 266.8486633300781 TIME 0.21596956253051758
+2018-07-10 17:49:49,414: main_new: DEBUG: Epoch 107 Update 4860 Cost 0.7565886378288269 L2 266.16912841796875 TIME 0.05935788154602051
+2018-07-10 17:49:51,840: main_new: DEBUG: Epoch  107
+2018-07-10 17:49:51,840: main_new: DEBUG: Valid cost  0.8300141908905723
+2018-07-10 17:49:51,840: main_new: DEBUG: Valid accuracy  0.5284090909090909
+2018-07-10 17:49:51,840: main_new: DEBUG: Test cost  0.8150175213813782
+2018-07-10 17:49:51,840: main_new: DEBUG: Test accuracy  0.6079545454545454
+2018-07-10 17:49:51,840: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:49:51,840: main_new: INFO: Saving...
+2018-07-10 17:49:52,257: main_new: INFO: ../../models/_epoch_107_model.ckpt
+2018-07-10 17:49:52,333: main_new: INFO: Done
+2018-07-10 17:49:52,334: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:49:52,334: main_new: DEBUG: Training accuracy:  0.5698086463501063
+2018-07-10 17:49:52,334: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:49:59,068: main_new: DEBUG: Epoch 108 Update 4880 Cost 0.8100647330284119 L2 265.44012451171875 TIME 0.22913742065429688
+2018-07-10 17:50:05,972: main_new: DEBUG: Epoch 108 Update 4900 Cost 0.8030192852020264 L2 264.7913818359375 TIME 0.2561955451965332
+2018-07-10 17:50:10,064: main_new: DEBUG: Epoch  108
+2018-07-10 17:50:10,064: main_new: DEBUG: Valid cost  0.8295755819840864
+2018-07-10 17:50:10,064: main_new: DEBUG: Valid accuracy  0.5284090909090909
+2018-07-10 17:50:10,064: main_new: DEBUG: Test cost  0.8146901672536676
+2018-07-10 17:50:10,064: main_new: DEBUG: Test accuracy  0.6022727272727273
+2018-07-10 17:50:10,064: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:50:10,064: main_new: INFO: Saving...
+2018-07-10 17:50:10,479: main_new: INFO: ../../models/_epoch_108_model.ckpt
+2018-07-10 17:50:10,594: main_new: INFO: Done
+2018-07-10 17:50:10,594: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:50:10,595: main_new: DEBUG: Training accuracy:  0.5648476257973069
+2018-07-10 17:50:10,595: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:50:16,003: main_new: DEBUG: Epoch 109 Update 4920 Cost 0.7937753796577454 L2 264.0377197265625 TIME 0.2476789951324463
+2018-07-10 17:50:22,815: main_new: DEBUG: Epoch 109 Update 4940 Cost 0.7700921297073364 L2 263.37786865234375 TIME 0.2538924217224121
+2018-07-10 17:50:28,341: main_new: DEBUG: Epoch  109
+2018-07-10 17:50:28,341: main_new: DEBUG: Valid cost  0.8289813345128839
+2018-07-10 17:50:28,341: main_new: DEBUG: Valid accuracy  0.5284090909090909
+2018-07-10 17:50:28,341: main_new: DEBUG: Test cost  0.8137081428007646
+2018-07-10 17:50:28,342: main_new: DEBUG: Test accuracy  0.6022727272727273
+2018-07-10 17:50:28,342: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:50:28,342: main_new: INFO: Saving...
+2018-07-10 17:50:28,746: main_new: INFO: ../../models/_epoch_109_model.ckpt
+2018-07-10 17:50:28,819: main_new: INFO: Done
+2018-07-10 17:50:28,819: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:50:28,819: main_new: DEBUG: Training accuracy:  0.5655563430191354
+2018-07-10 17:50:28,819: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:50:32,836: main_new: DEBUG: Epoch 110 Update 4960 Cost 0.8334403038024902 L2 262.75494384765625 TIME 0.25620412826538086
+2018-07-10 17:50:39,672: main_new: DEBUG: Epoch 110 Update 4980 Cost 0.8124813437461853 L2 262.034912109375 TIME 0.26723527908325195
+2018-07-10 17:50:46,698: main_new: DEBUG: Epoch  110
+2018-07-10 17:50:46,698: main_new: DEBUG: Valid cost  0.8284657976844094
+2018-07-10 17:50:46,698: main_new: DEBUG: Valid accuracy  0.5284090909090909
+2018-07-10 17:50:46,698: main_new: DEBUG: Test cost  0.8129977258768949
+2018-07-10 17:50:46,698: main_new: DEBUG: Test accuracy  0.6022727272727273
+2018-07-10 17:50:46,698: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:50:46,698: main_new: INFO: Saving...
+2018-07-10 17:50:47,103: main_new: INFO: ../../models/_epoch_110_model.ckpt
+2018-07-10 17:50:47,177: main_new: INFO: Done
+2018-07-10 17:50:47,178: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:50:47,178: main_new: DEBUG: Training accuracy:  0.5705173635719348
+2018-07-10 17:50:47,178: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:50:49,767: main_new: DEBUG: Epoch 111 Update 5000 Cost 0.7894545793533325 L2 261.38311767578125 TIME 0.2568931579589844
+2018-07-10 17:50:56,551: main_new: DEBUG: Epoch 111 Update 5020 Cost 0.8120254874229431 L2 260.736572265625 TIME 0.22796916961669922
+2018-07-10 17:51:02,473: main_new: DEBUG: Epoch 111 Update 5040 Cost 0.7737217545509338 L2 260.08514404296875 TIME 0.07769370079040527
+2018-07-10 17:51:04,944: main_new: DEBUG: Epoch  111
+2018-07-10 17:51:04,944: main_new: DEBUG: Valid cost  0.8278205503116954
+2018-07-10 17:51:04,944: main_new: DEBUG: Valid accuracy  0.5284090909090909
+2018-07-10 17:51:04,944: main_new: DEBUG: Test cost  0.8115761009129611
+2018-07-10 17:51:04,945: main_new: DEBUG: Test accuracy  0.6022727272727273
+2018-07-10 17:51:04,945: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:51:04,945: main_new: INFO: Saving...
+2018-07-10 17:51:05,345: main_new: INFO: ../../models/_epoch_111_model.ckpt
+2018-07-10 17:51:05,422: main_new: INFO: Done
+2018-07-10 17:51:05,422: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:51:05,422: main_new: DEBUG: Training accuracy:  0.5832742735648476
+2018-07-10 17:51:05,422: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:51:12,248: main_new: DEBUG: Epoch 112 Update 5060 Cost 0.8347026705741882 L2 259.4422302246094 TIME 0.2346515655517578
+2018-07-10 17:51:19,094: main_new: DEBUG: Epoch 112 Update 5080 Cost 0.7860431671142578 L2 258.84417724609375 TIME 0.2712438106536865
+2018-07-10 17:51:23,053: main_new: DEBUG: Epoch  112
+2018-07-10 17:51:23,053: main_new: DEBUG: Valid cost  0.8274169726805254
+2018-07-10 17:51:23,054: main_new: DEBUG: Valid accuracy  0.5284090909090909
+2018-07-10 17:51:23,054: main_new: DEBUG: Test cost  0.8109684369780801
+2018-07-10 17:51:23,054: main_new: DEBUG: Test accuracy  0.6022727272727273
+2018-07-10 17:51:23,054: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:51:23,054: main_new: INFO: Saving...
+2018-07-10 17:51:23,453: main_new: INFO: ../../models/_epoch_112_model.ckpt
+2018-07-10 17:51:23,515: main_new: INFO: Done
+2018-07-10 17:51:23,515: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:51:23,515: main_new: DEBUG: Training accuracy:  0.5676824946846208
+2018-07-10 17:51:23,516: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:51:28,908: main_new: DEBUG: Epoch 113 Update 5100 Cost 0.7820648550987244 L2 258.22283935546875 TIME 0.23829269409179688
+2018-07-10 17:51:35,623: main_new: DEBUG: Epoch 113 Update 5120 Cost 0.8077653646469116 L2 257.65679931640625 TIME 0.24991416931152344
+2018-07-10 17:51:41,045: main_new: DEBUG: Epoch  113
+2018-07-10 17:51:41,045: main_new: DEBUG: Valid cost  0.8271238803863525
+2018-07-10 17:51:41,046: main_new: DEBUG: Valid accuracy  0.5284090909090909
+2018-07-10 17:51:41,046: main_new: DEBUG: Test cost  0.8106607523831454
+2018-07-10 17:51:41,046: main_new: DEBUG: Test accuracy  0.6079545454545454
+2018-07-10 17:51:41,046: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:51:41,046: main_new: INFO: Saving...
+2018-07-10 17:51:41,443: main_new: INFO: ../../models/_epoch_113_model.ckpt
+2018-07-10 17:51:41,517: main_new: INFO: Done
+2018-07-10 17:51:41,517: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:51:41,517: main_new: DEBUG: Training accuracy:  0.5676824946846208
+2018-07-10 17:51:41,517: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:51:45,347: main_new: DEBUG: Epoch 114 Update 5140 Cost 0.7864227890968323 L2 257.00555419921875 TIME 0.23554611206054688
+2018-07-10 17:51:52,095: main_new: DEBUG: Epoch 114 Update 5160 Cost 0.8047049045562744 L2 256.4505310058594 TIME 0.24715971946716309
+2018-07-10 17:51:58,913: main_new: DEBUG: Epoch  114
+2018-07-10 17:51:58,913: main_new: DEBUG: Valid cost  0.8270997350866144
+2018-07-10 17:51:58,914: main_new: DEBUG: Valid accuracy  0.5
+2018-07-10 17:51:58,914: main_new: DEBUG: Test cost  0.8113170211965387
+2018-07-10 17:51:58,914: main_new: DEBUG: Test accuracy  0.6477272727272727
+2018-07-10 17:51:58,914: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:51:58,914: main_new: INFO: Saving...
+2018-07-10 17:51:59,312: main_new: INFO: ../../models/_epoch_114_model.ckpt
+2018-07-10 17:51:59,408: main_new: INFO: Done
+2018-07-10 17:51:59,408: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:51:59,408: main_new: DEBUG: Training accuracy:  0.5733522324592487
+2018-07-10 17:51:59,408: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:52:01,982: main_new: DEBUG: Epoch 115 Update 5180 Cost 0.8223769664764404 L2 255.8672332763672 TIME 0.24538445472717285
+2018-07-10 17:52:08,589: main_new: DEBUG: Epoch 115 Update 5200 Cost 0.8023269176483154 L2 255.26095581054688 TIME 0.23520255088806152
+2018-07-10 17:52:14,382: main_new: DEBUG: Epoch 115 Update 5220 Cost 0.8021207451820374 L2 254.68386840820312 TIME 0.0674593448638916
+2018-07-10 17:52:16,799: main_new: DEBUG: Epoch  115
+2018-07-10 17:52:16,800: main_new: DEBUG: Valid cost  0.826736569404602
+2018-07-10 17:52:16,800: main_new: DEBUG: Valid accuracy  0.5056818181818182
+2018-07-10 17:52:16,800: main_new: DEBUG: Test cost  0.8107919801365245
+2018-07-10 17:52:16,800: main_new: DEBUG: Test accuracy  0.6477272727272727
+2018-07-10 17:52:16,800: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:52:16,800: main_new: INFO: Saving...
+2018-07-10 17:52:17,195: main_new: INFO: ../../models/_epoch_115_model.ckpt
+2018-07-10 17:52:17,281: main_new: INFO: Done
+2018-07-10 17:52:17,281: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:52:17,281: main_new: DEBUG: Training accuracy:  0.5719347980155918
+2018-07-10 17:52:17,281: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:52:24,094: main_new: DEBUG: Epoch 116 Update 5240 Cost 0.787036657333374 L2 254.11083984375 TIME 0.23708128929138184
+2018-07-10 17:52:30,795: main_new: DEBUG: Epoch 116 Update 5260 Cost 0.798667311668396 L2 253.5625457763672 TIME 0.260831356048584
+2018-07-10 17:52:34,723: main_new: DEBUG: Epoch  116
+2018-07-10 17:52:34,724: main_new: DEBUG: Valid cost  0.8260060819712552
+2018-07-10 17:52:34,724: main_new: DEBUG: Valid accuracy  0.5113636363636364
+2018-07-10 17:52:34,724: main_new: DEBUG: Test cost  0.808990868655118
+2018-07-10 17:52:34,724: main_new: DEBUG: Test accuracy  0.6079545454545454
+2018-07-10 17:52:34,724: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:52:34,724: main_new: INFO: Saving...
+2018-07-10 17:52:35,201: main_new: INFO: ../../models/_epoch_116_model.ckpt
+2018-07-10 17:52:35,316: main_new: INFO: Done
+2018-07-10 17:52:35,316: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:52:35,316: main_new: DEBUG: Training accuracy:  0.5733522324592487
+2018-07-10 17:52:35,316: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:52:40,564: main_new: DEBUG: Epoch 117 Update 5280 Cost 0.794079065322876 L2 252.99734497070312 TIME 0.24686574935913086
+2018-07-10 17:52:47,382: main_new: DEBUG: Epoch 117 Update 5300 Cost 0.802588701248169 L2 252.44577026367188 TIME 0.26138782501220703
+2018-07-10 17:52:52,759: main_new: DEBUG: Epoch  117
+2018-07-10 17:52:52,759: main_new: DEBUG: Valid cost  0.8253523815761913
+2018-07-10 17:52:52,759: main_new: DEBUG: Valid accuracy  0.5227272727272727
+2018-07-10 17:52:52,759: main_new: DEBUG: Test cost  0.8075731450861151
+2018-07-10 17:52:52,759: main_new: DEBUG: Test accuracy  0.6136363636363636
+2018-07-10 17:52:52,759: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:52:52,759: main_new: INFO: Saving...
+2018-07-10 17:52:53,157: main_new: INFO: ../../models/_epoch_117_model.ckpt
+2018-07-10 17:52:53,233: main_new: INFO: Done
+2018-07-10 17:52:53,233: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:52:53,233: main_new: DEBUG: Training accuracy:  0.5676824946846208
+2018-07-10 17:52:53,233: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:52:57,173: main_new: DEBUG: Epoch 118 Update 5320 Cost 0.803248405456543 L2 251.9002685546875 TIME 0.2514219284057617
+2018-07-10 17:53:03,837: main_new: DEBUG: Epoch 118 Update 5340 Cost 0.7588122487068176 L2 251.383056640625 TIME 0.2568035125732422
+2018-07-10 17:53:10,702: main_new: DEBUG: Epoch  118
+2018-07-10 17:53:10,702: main_new: DEBUG: Valid cost  0.8257037943059747
+2018-07-10 17:53:10,702: main_new: DEBUG: Valid accuracy  0.5113636363636364
+2018-07-10 17:53:10,702: main_new: DEBUG: Test cost  0.8089702996340665
+2018-07-10 17:53:10,702: main_new: DEBUG: Test accuracy  0.6477272727272727
+2018-07-10 17:53:10,702: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:53:10,702: main_new: INFO: wait_counter max, need to half the lr
+2018-07-10 17:53:10,702: main_new: DEBUG: bad_counter:  1
+2018-07-10 17:53:10,702: main_new: DEBUG: lrate change to:   0.04
+2018-07-10 17:53:10,703: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:53:10,703: main_new: DEBUG: Training accuracy:  0.5804394046775336
+2018-07-10 17:53:10,703: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:53:13,091: main_new: DEBUG: Epoch 119 Update 5360 Cost 0.8034526109695435 L2 250.86932373046875 TIME 0.2223799228668213
+2018-07-10 17:53:19,950: main_new: DEBUG: Epoch 119 Update 5380 Cost 0.8023625612258911 L2 250.26699829101562 TIME 0.2324354648590088
+2018-07-10 17:53:25,708: main_new: DEBUG: Epoch 119 Update 5400 Cost 0.8658209443092346 L2 249.7711944580078 TIME 0.07698750495910645
+2018-07-10 17:53:28,191: main_new: DEBUG: Epoch  119
+2018-07-10 17:53:28,192: main_new: DEBUG: Valid cost  0.8252231316132979
+2018-07-10 17:53:28,192: main_new: DEBUG: Valid accuracy  0.5056818181818182
+2018-07-10 17:53:28,192: main_new: DEBUG: Test cost  0.8080404671755704
+2018-07-10 17:53:28,192: main_new: DEBUG: Test accuracy  0.6534090909090909
+2018-07-10 17:53:28,192: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:53:28,192: main_new: INFO: Saving...
+2018-07-10 17:53:28,597: main_new: INFO: ../../models/_epoch_118_model.ckpt
+2018-07-10 17:53:28,667: main_new: INFO: Done
+2018-07-10 17:53:28,667: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:53:28,668: main_new: DEBUG: Training accuracy:  0.5804394046775336
+2018-07-10 17:53:28,668: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:53:35,313: main_new: DEBUG: Epoch 120 Update 5420 Cost 0.8030816316604614 L2 249.27777099609375 TIME 0.23002195358276367
+2018-07-10 17:53:42,105: main_new: DEBUG: Epoch 120 Update 5440 Cost 0.7819165587425232 L2 248.82745361328125 TIME 0.21124982833862305
+2018-07-10 17:53:46,095: main_new: DEBUG: Epoch  120
+2018-07-10 17:53:46,096: main_new: DEBUG: Valid cost  0.8247227668762207
+2018-07-10 17:53:46,096: main_new: DEBUG: Valid accuracy  0.5
+2018-07-10 17:53:46,096: main_new: DEBUG: Test cost  0.8069432594559409
+2018-07-10 17:53:46,096: main_new: DEBUG: Test accuracy  0.6477272727272727
+2018-07-10 17:53:46,096: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:53:46,096: main_new: INFO: Saving...
+2018-07-10 17:53:46,506: main_new: INFO: ../../models/_epoch_119_model.ckpt
+2018-07-10 17:53:46,571: main_new: INFO: Done
+2018-07-10 17:53:46,571: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:53:46,571: main_new: DEBUG: Training accuracy:  0.5875265768958186
+2018-07-10 17:53:46,571: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:53:51,939: main_new: DEBUG: Epoch 121 Update 5460 Cost 0.7903520464897156 L2 248.28257751464844 TIME 0.22405552864074707
+2018-07-10 17:53:58,741: main_new: DEBUG: Epoch 121 Update 5480 Cost 0.8100287914276123 L2 247.79296875 TIME 0.23569536209106445
+2018-07-10 17:54:04,038: main_new: DEBUG: Epoch  121
+2018-07-10 17:54:04,039: main_new: DEBUG: Valid cost  0.8243423537774519
+2018-07-10 17:54:04,039: main_new: DEBUG: Valid accuracy  0.5056818181818182
+2018-07-10 17:54:04,039: main_new: DEBUG: Test cost  0.8059350685639814
+2018-07-10 17:54:04,039: main_new: DEBUG: Test accuracy  0.6306818181818182
+2018-07-10 17:54:04,039: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:54:04,039: main_new: INFO: Saving...
+2018-07-10 17:54:04,439: main_new: INFO: ../../models/_epoch_120_model.ckpt
+2018-07-10 17:54:04,508: main_new: INFO: Done
+2018-07-10 17:54:04,509: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:54:04,509: main_new: DEBUG: Training accuracy:  0.5790219702338767
+2018-07-10 17:54:04,509: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:54:08,478: main_new: DEBUG: Epoch 122 Update 5500 Cost 0.7800648212432861 L2 247.31121826171875 TIME 0.2572176456451416
+2018-07-10 17:54:15,169: main_new: DEBUG: Epoch 122 Update 5520 Cost 0.7957407236099243 L2 246.8208770751953 TIME 0.25572705268859863
+2018-07-10 17:54:22,012: main_new: DEBUG: Epoch  122
+2018-07-10 17:54:22,012: main_new: DEBUG: Valid cost  0.8240560672499917
+2018-07-10 17:54:22,012: main_new: DEBUG: Valid accuracy  0.5056818181818182
+2018-07-10 17:54:22,012: main_new: DEBUG: Test cost  0.8052501244978472
+2018-07-10 17:54:22,012: main_new: DEBUG: Test accuracy  0.6306818181818182
+2018-07-10 17:54:22,012: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:54:22,012: main_new: INFO: Saving...
+2018-07-10 17:54:22,423: main_new: INFO: ../../models/_epoch_121_model.ckpt
+2018-07-10 17:54:22,487: main_new: INFO: Done
+2018-07-10 17:54:22,488: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:54:22,488: main_new: DEBUG: Training accuracy:  0.5790219702338767
+2018-07-10 17:54:22,488: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:54:25,038: main_new: DEBUG: Epoch 123 Update 5540 Cost 0.7944246530532837 L2 246.34707641601562 TIME 0.24666500091552734
+2018-07-10 17:54:31,777: main_new: DEBUG: Epoch 123 Update 5560 Cost 0.7928891181945801 L2 245.88525390625 TIME 0.2501373291015625
+2018-07-10 17:54:37,536: main_new: DEBUG: Epoch 123 Update 5580 Cost 0.7065228819847107 L2 245.45375061035156 TIME 0.06959700584411621
+2018-07-10 17:54:39,949: main_new: DEBUG: Epoch  123
+2018-07-10 17:54:39,949: main_new: DEBUG: Valid cost  0.8238204609264027
+2018-07-10 17:54:39,949: main_new: DEBUG: Valid accuracy  0.5
+2018-07-10 17:54:39,949: main_new: DEBUG: Test cost  0.8050017248500477
+2018-07-10 17:54:39,949: main_new: DEBUG: Test accuracy  0.6534090909090909
+2018-07-10 17:54:39,949: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:54:39,949: main_new: INFO: Saving...
+2018-07-10 17:54:40,349: main_new: INFO: ../../models/_epoch_122_model.ckpt
+2018-07-10 17:54:40,405: main_new: INFO: Done
+2018-07-10 17:54:40,405: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:54:40,405: main_new: DEBUG: Training accuracy:  0.5705173635719348
+2018-07-10 17:54:40,405: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:54:47,132: main_new: DEBUG: Epoch 124 Update 5600 Cost 0.8153355121612549 L2 244.99606323242188 TIME 0.25305604934692383
+2018-07-10 17:54:53,897: main_new: DEBUG: Epoch 124 Update 5620 Cost 0.8029853105545044 L2 244.57638549804688 TIME 0.25247859954833984
+2018-07-10 17:54:57,828: main_new: DEBUG: Epoch  124
+2018-07-10 17:54:57,828: main_new: DEBUG: Valid cost  0.8239624933762983
+2018-07-10 17:54:57,828: main_new: DEBUG: Valid accuracy  0.5
+2018-07-10 17:54:57,828: main_new: DEBUG: Test cost  0.8053643595088612
+2018-07-10 17:54:57,828: main_new: DEBUG: Test accuracy  0.6477272727272727
+2018-07-10 17:54:57,828: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:54:57,828: main_new: INFO: wait_counter max, need to half the lr
+2018-07-10 17:54:57,828: main_new: DEBUG: bad_counter:  2
+2018-07-10 17:54:57,828: main_new: DEBUG: lrate change to:   0.04
+2018-07-10 17:54:57,828: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:54:57,828: main_new: DEBUG: Training accuracy:  0.58681785967399
+2018-07-10 17:54:57,828: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:55:03,178: main_new: DEBUG: Epoch 125 Update 5640 Cost 0.8092789649963379 L2 244.10073852539062 TIME 0.2574179172515869
+2018-07-10 17:55:09,860: main_new: DEBUG: Epoch 125 Update 5660 Cost 0.8392953276634216 L2 243.6719207763672 TIME 0.2391059398651123
+2018-07-10 17:55:15,255: main_new: DEBUG: Epoch  125
+2018-07-10 17:55:15,256: main_new: DEBUG: Valid cost  0.8233470049771395
+2018-07-10 17:55:15,256: main_new: DEBUG: Valid accuracy  0.5
+2018-07-10 17:55:15,256: main_new: DEBUG: Test cost  0.8035666725852273
+2018-07-10 17:55:15,256: main_new: DEBUG: Test accuracy  0.6306818181818182
+2018-07-10 17:55:15,256: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:55:15,256: main_new: INFO: Saving...
+2018-07-10 17:55:15,670: main_new: INFO: ../../models/_epoch_123_model.ckpt
+2018-07-10 17:55:15,727: main_new: INFO: Done
+2018-07-10 17:55:15,727: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:55:15,727: main_new: DEBUG: Training accuracy:  0.5712260807937632
+2018-07-10 17:55:15,727: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:55:19,656: main_new: DEBUG: Epoch 126 Update 5680 Cost 0.8048841953277588 L2 243.27178955078125 TIME 0.2190074920654297
+2018-07-10 17:55:26,355: main_new: DEBUG: Epoch 126 Update 5700 Cost 0.832419753074646 L2 242.80055236816406 TIME 0.2373802661895752
+2018-07-10 17:55:33,111: main_new: DEBUG: Epoch  126
+2018-07-10 17:55:33,111: main_new: DEBUG: Valid cost  0.8233838243917986
+2018-07-10 17:55:33,111: main_new: DEBUG: Valid accuracy  0.5113636363636364
+2018-07-10 17:55:33,111: main_new: DEBUG: Test cost  0.8038571747866544
+2018-07-10 17:55:33,111: main_new: DEBUG: Test accuracy  0.6534090909090909
+2018-07-10 17:55:33,111: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:55:33,111: main_new: INFO: wait_counter max, need to half the lr
+2018-07-10 17:55:33,111: main_new: DEBUG: bad_counter:  3
+2018-07-10 17:55:33,111: main_new: DEBUG: lrate change to:   0.04
+2018-07-10 17:55:33,111: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:55:33,111: main_new: DEBUG: Training accuracy:  0.5712260807937632
+2018-07-10 17:55:33,111: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:55:35,621: main_new: DEBUG: Epoch 127 Update 5720 Cost 0.7920728921890259 L2 242.3741455078125 TIME 0.2269611358642578
+2018-07-10 17:55:42,324: main_new: DEBUG: Epoch 127 Update 5740 Cost 0.7873134613037109 L2 241.9471435546875 TIME 0.24892711639404297
+2018-07-10 17:55:48,119: main_new: DEBUG: Epoch 127 Update 5760 Cost 0.8761386871337891 L2 241.53472900390625 TIME 0.07956314086914062
+2018-07-10 17:55:50,444: main_new: DEBUG: Epoch  127
+2018-07-10 17:55:50,444: main_new: DEBUG: Valid cost  0.8230250694534995
+2018-07-10 17:55:50,444: main_new: DEBUG: Valid accuracy  0.5
+2018-07-10 17:55:50,444: main_new: DEBUG: Test cost  0.8028018799695101
+2018-07-10 17:55:50,444: main_new: DEBUG: Test accuracy  0.6477272727272727
+2018-07-10 17:55:50,444: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:55:50,444: main_new: INFO: Saving...
+2018-07-10 17:55:50,840: main_new: INFO: ../../models/_epoch_124_model.ckpt
+2018-07-10 17:55:50,898: main_new: INFO: Done
+2018-07-10 17:55:50,898: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:55:50,898: main_new: DEBUG: Training accuracy:  0.5783132530120482
+2018-07-10 17:55:50,898: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:55:57,575: main_new: DEBUG: Epoch 128 Update 5780 Cost 0.8301783800125122 L2 241.10775756835938 TIME 0.23891019821166992
+2018-07-10 17:56:04,290: main_new: DEBUG: Epoch 128 Update 5800 Cost 0.7751054763793945 L2 240.75289916992188 TIME 0.2486708164215088
+2018-07-10 17:56:08,317: main_new: DEBUG: Epoch  128
+2018-07-10 17:56:08,317: main_new: DEBUG: Valid cost  0.822581247849898
+2018-07-10 17:56:08,317: main_new: DEBUG: Valid accuracy  0.5113636363636364
+2018-07-10 17:56:08,317: main_new: DEBUG: Test cost  0.8013670444488525
+2018-07-10 17:56:08,317: main_new: DEBUG: Test accuracy  0.625
+2018-07-10 17:56:08,317: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:56:08,317: main_new: INFO: Saving...
+2018-07-10 17:56:08,946: main_new: INFO: ../../models/_epoch_125_model.ckpt
+2018-07-10 17:56:09,006: main_new: INFO: Done
+2018-07-10 17:56:09,006: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:56:09,006: main_new: DEBUG: Training accuracy:  0.589652728561304
+2018-07-10 17:56:09,006: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:56:14,260: main_new: DEBUG: Epoch 129 Update 5820 Cost 0.79155433177948 L2 240.3447265625 TIME 0.22379660606384277
+2018-07-10 17:56:21,018: main_new: DEBUG: Epoch 129 Update 5840 Cost 0.8123843669891357 L2 239.9586181640625 TIME 0.23430085182189941
+2018-07-10 17:56:26,439: main_new: DEBUG: Epoch  129
+2018-07-10 17:56:26,439: main_new: DEBUG: Valid cost  0.8233998905528676
+2018-07-10 17:56:26,439: main_new: DEBUG: Valid accuracy  0.48863636363636365
+2018-07-10 17:56:26,439: main_new: DEBUG: Test cost  0.8036205660213124
+2018-07-10 17:56:26,439: main_new: DEBUG: Test accuracy  0.6306818181818182
+2018-07-10 17:56:26,439: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:56:26,439: main_new: INFO: wait_counter max, need to half the lr
+2018-07-10 17:56:26,439: main_new: DEBUG: bad_counter:  4
+2018-07-10 17:56:26,439: main_new: DEBUG: lrate change to:   0.04
+2018-07-10 17:56:26,439: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:56:26,439: main_new: DEBUG: Training accuracy:  0.5698086463501063
+2018-07-10 17:56:26,439: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:56:30,288: main_new: DEBUG: Epoch 130 Update 5860 Cost 0.7843317985534668 L2 239.55992126464844 TIME 0.25317859649658203
+2018-07-10 17:56:37,023: main_new: DEBUG: Epoch 130 Update 5880 Cost 0.7885326147079468 L2 239.16783142089844 TIME 0.2529172897338867
+2018-07-10 17:56:43,797: main_new: DEBUG: Epoch  130
+2018-07-10 17:56:43,797: main_new: DEBUG: Valid cost  0.8231119025837291
+2018-07-10 17:56:43,797: main_new: DEBUG: Valid accuracy  0.4715909090909091
+2018-07-10 17:56:43,797: main_new: DEBUG: Test cost  0.8026895956559614
+2018-07-10 17:56:43,797: main_new: DEBUG: Test accuracy  0.6363636363636364
+2018-07-10 17:56:43,797: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:56:43,797: main_new: INFO: wait_counter max, need to half the lr
+2018-07-10 17:56:43,797: main_new: DEBUG: bad_counter:  5
+2018-07-10 17:56:43,797: main_new: DEBUG: lrate change to:   0.04
+2018-07-10 17:56:43,798: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:56:43,798: main_new: DEBUG: Training accuracy:  0.5776045357902198
+2018-07-10 17:56:43,798: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:56:46,165: main_new: DEBUG: Epoch 131 Update 5900 Cost 0.7757163643836975 L2 238.80801391601562 TIME 0.2349705696105957
+2018-07-10 17:56:52,975: main_new: DEBUG: Epoch 131 Update 5920 Cost 0.7986979484558105 L2 238.4086151123047 TIME 0.27445006370544434
+2018-07-10 17:56:58,680: main_new: DEBUG: Epoch 131 Update 5940 Cost 0.7492850422859192 L2 238.02084350585938 TIME 0.06007528305053711
+2018-07-10 17:57:01,130: main_new: DEBUG: Epoch  131
+2018-07-10 17:57:01,130: main_new: DEBUG: Valid cost  0.8228641098195856
+2018-07-10 17:57:01,130: main_new: DEBUG: Valid accuracy  0.48863636363636365
+2018-07-10 17:57:01,130: main_new: DEBUG: Test cost  0.8016677119515159
+2018-07-10 17:57:01,130: main_new: DEBUG: Test accuracy  0.6420454545454546
+2018-07-10 17:57:01,130: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:57:01,130: main_new: INFO: wait_counter max, need to half the lr
+2018-07-10 17:57:01,130: main_new: DEBUG: bad_counter:  6
+2018-07-10 17:57:01,130: main_new: DEBUG: lrate change to:   0.04
+2018-07-10 17:57:01,130: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:57:01,130: main_new: DEBUG: Training accuracy:  0.5783132530120482
+2018-07-10 17:57:01,130: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:57:07,837: main_new: DEBUG: Epoch 132 Update 5960 Cost 0.7896156311035156 L2 237.6263427734375 TIME 0.25420475006103516
+2018-07-10 17:57:14,547: main_new: DEBUG: Epoch 132 Update 5980 Cost 0.7948324680328369 L2 237.2798614501953 TIME 0.25553083419799805
+2018-07-10 17:57:18,497: main_new: DEBUG: Epoch  132
+2018-07-10 17:57:18,497: main_new: DEBUG: Valid cost  0.8226554718884554
+2018-07-10 17:57:18,497: main_new: DEBUG: Valid accuracy  0.4943181818181818
+2018-07-10 17:57:18,497: main_new: DEBUG: Test cost  0.8008657856421038
+2018-07-10 17:57:18,497: main_new: DEBUG: Test accuracy  0.6534090909090909
+2018-07-10 17:57:18,497: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:57:18,497: main_new: INFO: wait_counter max, need to half the lr
+2018-07-10 17:57:18,497: main_new: DEBUG: bad_counter:  7
+2018-07-10 17:57:18,498: main_new: DEBUG: lrate change to:   0.04
+2018-07-10 17:57:18,498: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:57:18,498: main_new: DEBUG: Training accuracy:  0.5811481218993622
+2018-07-10 17:57:18,498: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:57:23,855: main_new: DEBUG: Epoch 133 Update 6000 Cost 0.7634610533714294 L2 236.89968872070312 TIME 0.25446248054504395
+2018-07-10 17:57:30,462: main_new: DEBUG: Epoch 133 Update 6020 Cost 0.7771098017692566 L2 236.55262756347656 TIME 0.2404155731201172
+2018-07-10 17:57:36,833: main_new: DEBUG: Epoch  133
+2018-07-10 17:57:36,833: main_new: DEBUG: Valid cost  0.823289773680947
+2018-07-10 17:57:36,833: main_new: DEBUG: Valid accuracy  0.48295454545454547
+2018-07-10 17:57:36,833: main_new: DEBUG: Test cost  0.802253170446916
+2018-07-10 17:57:36,833: main_new: DEBUG: Test accuracy  0.6193181818181818
+2018-07-10 17:57:36,834: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:57:36,834: main_new: INFO: wait_counter max, need to half the lr
+2018-07-10 17:57:36,834: main_new: DEBUG: bad_counter:  8
+2018-07-10 17:57:36,834: main_new: DEBUG: lrate change to:   0.04
+2018-07-10 17:57:36,834: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:57:36,834: main_new: DEBUG: Training accuracy:  0.5655563430191354
+2018-07-10 17:57:36,834: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:57:41,087: main_new: DEBUG: Epoch 134 Update 6040 Cost 0.8154588937759399 L2 236.2075958251953 TIME 0.2450253963470459
+2018-07-10 17:57:47,753: main_new: DEBUG: Epoch 134 Update 6060 Cost 0.7916133999824524 L2 235.81698608398438 TIME 0.23092150688171387
+2018-07-10 17:57:54,599: main_new: DEBUG: Epoch  134
+2018-07-10 17:57:54,600: main_new: DEBUG: Valid cost  0.8227113051847978
+2018-07-10 17:57:54,600: main_new: DEBUG: Valid accuracy  0.48295454545454547
+2018-07-10 17:57:54,600: main_new: DEBUG: Test cost  0.8006878928704695
+2018-07-10 17:57:54,600: main_new: DEBUG: Test accuracy  0.6363636363636364
+2018-07-10 17:57:54,600: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:57:54,600: main_new: INFO: wait_counter max, need to half the lr
+2018-07-10 17:57:54,600: main_new: DEBUG: bad_counter:  9
+2018-07-10 17:57:54,600: main_new: DEBUG: lrate change to:   0.04
+2018-07-10 17:57:54,600: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:57:54,600: main_new: DEBUG: Training accuracy:  0.5839829907866761
+2018-07-10 17:57:54,600: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:57:57,154: main_new: DEBUG: Epoch 135 Update 6080 Cost 0.7884318828582764 L2 235.53042602539062 TIME 0.2323439121246338
+2018-07-10 17:58:03,850: main_new: DEBUG: Epoch 135 Update 6100 Cost 0.8192955255508423 L2 235.1568145751953 TIME 0.2235560417175293
+2018-07-10 17:58:09,636: main_new: DEBUG: Epoch 135 Update 6120 Cost 0.7451882362365723 L2 234.80833435058594 TIME 0.08570265769958496
+2018-07-10 17:58:12,120: main_new: DEBUG: Epoch  135
+2018-07-10 17:58:12,120: main_new: DEBUG: Valid cost  0.8231774785301902
+2018-07-10 17:58:12,121: main_new: DEBUG: Valid accuracy  0.48295454545454547
+2018-07-10 17:58:12,121: main_new: DEBUG: Test cost  0.8013653538443826
+2018-07-10 17:58:12,121: main_new: DEBUG: Test accuracy  0.625
+2018-07-10 17:58:12,121: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:58:12,121: main_new: INFO: wait_counter max, need to half the lr
+2018-07-10 17:58:12,121: main_new: DEBUG: bad_counter:  10
+2018-07-10 17:58:12,121: main_new: DEBUG: lrate change to:   0.04
+2018-07-10 17:58:12,121: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:58:12,121: main_new: DEBUG: Training accuracy:  0.5846917080085046
+2018-07-10 17:58:12,121: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:58:18,875: main_new: DEBUG: Epoch 136 Update 6140 Cost 0.8354698419570923 L2 234.4500732421875 TIME 0.22810029983520508
+2018-07-10 17:58:25,803: main_new: DEBUG: Epoch 136 Update 6160 Cost 0.7920055389404297 L2 234.15625 TIME 0.2568020820617676
+2018-07-10 17:58:29,796: main_new: DEBUG: Epoch  136
+2018-07-10 17:58:29,796: main_new: DEBUG: Valid cost  0.8230384425683455
+2018-07-10 17:58:29,796: main_new: DEBUG: Valid accuracy  0.48295454545454547
+2018-07-10 17:58:29,796: main_new: DEBUG: Test cost  0.800603064623746
+2018-07-10 17:58:29,796: main_new: DEBUG: Test accuracy  0.6136363636363636
+2018-07-10 17:58:29,796: main_new: DEBUG: learning_rate:  0.04
+2018-07-10 17:58:29,796: main_new: INFO: wait_counter max, need to half the lr
+2018-07-10 17:58:29,796: main_new: DEBUG: bad_counter:  11
+2018-07-10 17:58:29,796: main_new: DEBUG: lrate change to:   0.04
+2018-07-10 17:58:29,796: main_new: INFO: Early Stop!
+2018-07-10 17:58:29,796: main_new: DEBUG: Seen samples:  1411
+2018-07-10 17:58:29,796: main_new: DEBUG: Training accuracy:  0.5776045357902198
+2018-07-10 17:58:29,796: main_new: DEBUG: Saved loss_plot pickle
+2018-07-10 17:58:29,862: tensorflow: INFO: Restoring parameters from ../../models/_epoch_125_model.ckpt
+2018-07-10 17:58:30,046: main_new: INFO: ================================================================================
+2018-07-10 17:58:30,046: main_new: INFO: Final Result
+2018-07-10 17:58:30,046: main_new: INFO: ================================================================================
+2018-07-10 17:58:30,046: main_new: DEBUG: best epoch   128
+2018-07-10 17:58:32,037: main_new: DEBUG: Valid cost   0.822581247849898
+2018-07-10 17:58:32,037: main_new: DEBUG: Valid accuracy   0.5113636363636364
+2018-07-10 17:58:33,345: main_new: DEBUG: Test cost   0.8013670444488525
+2018-07-10 17:58:33,345: main_new: DEBUG: Test accuracy   0.625
+2018-07-10 17:58:41,660: main_new: DEBUG: Train cost   0.7930574227866343
+2018-07-10 17:58:41,660: main_new: DEBUG: Train accuracy   0.5854004252303331
+2018-07-10 17:58:41,661: main_new: INFO: Load and save to history_predict.npz

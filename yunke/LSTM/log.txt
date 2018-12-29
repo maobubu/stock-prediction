@@ -1,0 +1,37 @@
+embeddings:0 (22485, 100)
+sequence_encode/bidirectional_rnn/fw/lstm_cell/kernel:0 (400, 1200)
+sequence_encode/bidirectional_rnn/fw/lstm_cell/bias:0 (1200,)
+sequence_encode/bidirectional_rnn/bw/lstm_cell/kernel:0 (400, 1200)
+sequence_encode/bidirectional_rnn/bw/lstm_cell/bias:0 (1200,)
+word_attention_hidden/kernel:0 (600, 1200)
+word_attention_out/kernel:0 (1200, 5)
+news_attention_hidden/kernel:0 (600, 1200)
+news_attention_out/kernel:0 (1200, 10)
+day_lstm/bidirectional_rnn/fw/lstm_cell/kernel:0 (900, 1200)
+day_lstm/bidirectional_rnn/fw/lstm_cell/bias:0 (1200,)
+day_lstm/bidirectional_rnn/bw/lstm_cell/kernel:0 (900, 1200)
+day_lstm/bidirectional_rnn/bw/lstm_cell/bias:0 (1200,)
+day_attention_hidden/kernel:0 (600, 300)
+day_attention_hidden/bias:0 (300,)
+day_attention_out/kernel:0 (300, 1)
+ff/kernel:0 (600, 300)
+ff/bias:0 (300,)
+fout/kernel:0 (300, 2)
+fout/bias:0 (2,)
+2018-06-17 23:23:59.458569: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+[?1049h[1;24r(B[m[4l[?7h[39;49mTraceback (most recent call last):
+  File "train.py", line 43, in <module>
+    wait_N           = 1,
+  File "/Users/maobu/PycharmProjects/CNN_stock/LSTM/main_new.py", line 693, in train
+    sess.run(init)
+  File "/usr/local/lib/python3.6/site-packages/tensorflow/python/debug/wrappers/framework.py", line 462, in run
+    is_callable_runner=bool(callable_runner)))
+  File "/usr/local/lib/python3.6/site-packages/tensorflow/python/debug/wrappers/local_cli_wrapper.py", line 267, in on_run_start
+    self._run_start_response = self._launch_cli()
+  File "/usr/local/lib/python3.6/site-packages/tensorflow/python/debug/wrappers/local_cli_wrapper.py", line 460, in _launch_cli
+    title_color=self._title_color)
+  File "/usr/local/lib/python3.6/site-packages/tensorflow/python/debug/cli/curses_ui.py", line 497, in run_ui
+    self._screen_launch(enable_mouse_on_start=enable_mouse_on_start)
+  File "/usr/local/lib/python3.6/site-packages/tensorflow/python/debug/cli/curses_ui.py", line 447, in _screen_launch
+    curses.cbreak()
+_curses.error: cbreak() returned ERR
