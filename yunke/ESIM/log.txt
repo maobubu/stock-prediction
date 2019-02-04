@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "./train.py", line 34, in <module>
-    wait_N           = 10,
-  File "/Users/maobu/stock/scripts/ESIM/main.py", line 418, in train
-    params = init_params(model_options, worddicts)
-  File "/Users/maobu/stock/scripts/ESIM/main.py", line 226, in init_params
-    with open(options['embedding'], 'r') as f:
-FileNotFoundError: [Errno 2] No such file or directory: '../../data/glove/vectors_all.txt'
